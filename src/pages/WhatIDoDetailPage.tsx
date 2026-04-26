@@ -30,6 +30,7 @@ function renderSitePageMediaBlock(
   section: RichSitePageSection | RichSitePageItem,
   key: string,
   extraClassName?: string,
+  showTitle = true,
 ) {
   const image = section.image
 
@@ -55,7 +56,7 @@ function renderSitePageMediaBlock(
           {image.caption ? <figcaption>{image.caption}</figcaption> : null}
         </figure>
         <div className="rich-media-copy site-page-media-copy">
-          {'title' in section && section.title ? <h3>{section.title}</h3> : null}
+          {showTitle && 'title' in section && section.title ? <h3>{section.title}</h3> : null}
           {section.markdown ? (
             <MarkdownContent className="site-page-markdown">{section.markdown}</MarkdownContent>
           ) : null}
@@ -66,7 +67,7 @@ function renderSitePageMediaBlock(
 
   return (
     <div className={`motion-card site-page-text-panel ${extraClassName ?? ''}`.trim()} key={key}>
-      {'title' in section && section.title ? <h3>{section.title}</h3> : null}
+      {showTitle && 'title' in section && section.title ? <h3>{section.title}</h3> : null}
       {section.markdown ? (
         <MarkdownContent className="site-page-markdown">{section.markdown}</MarkdownContent>
       ) : null}
@@ -88,8 +89,9 @@ function RichSitePageView({ page }: { page: RichSitePage }) {
             Luke
           </a>
           <div className="nav-links">
-            <a href="#/">Home</a>
-            <a href="#/what-i-do">What I Do</a>
+            <a href="/#work">Case Studies</a>
+            <a href="#/what-i-do/design">What I Do</a>
+            <a href="/#contact">Contact</a>
           </div>
         </nav>
 
@@ -131,7 +133,7 @@ function RichSitePageView({ page }: { page: RichSitePage }) {
             </div>
 
             {section.image || section.markdown ? (
-              renderSitePageMediaBlock(section, `${section.title}-lead`, 'site-page-lead-band')
+              renderSitePageMediaBlock(section, `${section.title}-lead`, 'site-page-lead-band', false)
             ) : null}
 
             {section.asideTitle || section.asideMarkdown ? (
@@ -206,8 +208,8 @@ export function WhatIDoDetailPage({ slug }: { slug: string }) {
         <div className="not-found-card">
           <p className="section-label">Not Found</p>
           <h1>This page does not exist yet.</h1>
-          <a className="button button-primary" href="#/what-i-do">
-            Back to What I Do
+          <a className="button button-primary" href="#/what-i-do/design">
+            Back to Product Design
           </a>
         </div>
       </div>
@@ -222,8 +224,9 @@ export function WhatIDoDetailPage({ slug }: { slug: string }) {
             Luke
           </a>
           <div className="nav-links">
-            <a href="#/">Home</a>
-            <a href="#/what-i-do">What I Do</a>
+            <a href="/#work">Case Studies</a>
+            <a href="#/what-i-do/design">What I Do</a>
+            <a href="/#contact">Contact</a>
           </div>
         </nav>
 

@@ -97,12 +97,13 @@ const caseStudyFilterOptionOrder: Record<CaseStudyFilterKey, string[]> = {
   projectType: [
     'Developer Tools',
     'Multisig',
+    'UX Research',
     'Annotation',
     'NLP',
     'Margin Trading',
     'Usability Revamp',
   ],
-  industries: ['Blockchain Infra', 'DeFi', 'PropTech', 'Analytics'],
+  industries: ['Blockchain Infra', 'DeFi', 'PropTech', 'Analytics', 'Enterprise Banking'],
 }
 
 const caseStudyTagCategories: Record<string, CaseStudyFilterKey> = {
@@ -112,6 +113,7 @@ const caseStudyTagCategories: Record<string, CaseStudyFilterKey> = {
   TUI: 'devices',
   'Developer Tools': 'projectType',
   Multisig: 'projectType',
+  'UX Research': 'projectType',
   Annotation: 'projectType',
   NLP: 'projectType',
   'Margin Trading': 'projectType',
@@ -120,6 +122,7 @@ const caseStudyTagCategories: Record<string, CaseStudyFilterKey> = {
   DeFi: 'industries',
   PropTech: 'industries',
   Analytics: 'industries',
+  'Enterprise Banking': 'industries',
 }
 
 const caseStudyFilterColors: Record<string, Record<string, string>> = {
@@ -175,6 +178,15 @@ const caseStudyFilterColors: Record<string, Record<string, string>> = {
     hoverBackground: 'rgba(229, 213, 243, 0.16)',
     activeBorder: 'rgba(229, 213, 243, 0.56)',
     activeBackground: 'rgba(229, 213, 243, 0.22)',
+    text: 'rgba(255, 248, 251, 0.8)',
+  },
+  'UX Research': {
+    border: 'rgba(221, 230, 241, 0.18)',
+    background: 'rgba(221, 230, 241, 0.08)',
+    hoverBorder: 'rgba(221, 230, 241, 0.36)',
+    hoverBackground: 'rgba(221, 230, 241, 0.16)',
+    activeBorder: 'rgba(221, 230, 241, 0.56)',
+    activeBackground: 'rgba(221, 230, 241, 0.22)',
     text: 'rgba(255, 248, 251, 0.8)',
   },
   Annotation: {
@@ -247,6 +259,15 @@ const caseStudyFilterColors: Record<string, Record<string, string>> = {
     hoverBackground: 'rgba(212, 232, 244, 0.16)',
     activeBorder: 'rgba(212, 232, 244, 0.56)',
     activeBackground: 'rgba(212, 232, 244, 0.22)',
+    text: 'rgba(255, 248, 251, 0.8)',
+  },
+  'Enterprise Banking': {
+    border: 'rgba(232, 223, 212, 0.18)',
+    background: 'rgba(232, 223, 212, 0.08)',
+    hoverBorder: 'rgba(232, 223, 212, 0.36)',
+    hoverBackground: 'rgba(232, 223, 212, 0.16)',
+    activeBorder: 'rgba(232, 223, 212, 0.56)',
+    activeBackground: 'rgba(232, 223, 212, 0.22)',
     text: 'rgba(255, 248, 251, 0.8)',
   },
 }

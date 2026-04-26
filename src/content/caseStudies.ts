@@ -8,6 +8,7 @@ import rentThumbnail from '../assets/case_studies_thumbnails/rent_payment.png'
 import alphaThumbnail from '../assets/case_studies_thumbnails/alphahomorav2.png'
 import markrThumbnail from '../assets/case_studies_thumbnails/markr.png'
 import ladderThumbnail from '../assets/case_studies_thumbnails/ladder.png'
+import incidentManagementThumbnail from '../assets/incident-management/image.png'
 
 export type CaseStudy = {
   slug: string
@@ -461,6 +462,49 @@ export const caseStudies: CaseStudy[] = [
     learningPoints: [
       'Working product behavior can communicate design intent more fully than static screens alone.',
       'Learning through building made the design process more concrete and more complete.',
+    ],
+  },
+  {
+    slug: 'incident-management',
+    thumbnail: incidentManagementThumbnail,
+    title: 'Incident Management Transformation',
+    kicker: 'Enterprise Banking',
+    meta: 'IBM Digital Talent for Business - 2026',
+    duration: '2 months.',
+    role: 'User Researcher leading co-creation, facilitation, and systemic insight synthesis across seven business units.',
+    summary:
+      'Led UX research and co-creation for a state-owned commercial bank, turning fragmented complaint and incident workflows into a shared picture of the real system and a prioritized transformation direction.',
+    tags: ['Desktop', 'UX Research', 'Enterprise Banking'],
+    highlights: [
+      'Facilitated research across seven business units with competing realities.',
+      'Produced an 88-page co-create report and system-wide journey maps.',
+      'Turned operational pain into prioritized initiative directions leadership could act on.',
+    ],
+    contextTitle: 'A complex incident system with no shared end-to-end view',
+    contextSummary:
+      'A major state-owned commercial bank was handling incidents and complaints across more than seven business units, each with its own workflows, systems, and interpretation of what handling a case meant. The challenge was not only to identify what was broken, but to help every function see the system as one connected reality.',
+    challengeTitle: 'The research had to make systemic failure discussable',
+    challengePoints: [
+      'Frontline staff were carrying hidden operational burden while oversight teams were acting on incomplete data.',
+      'Cases were falling through gaps between functions because ownership broke down at handoff points.',
+      'The work had to surface truths without turning the conversation into blame between teams.',
+    ],
+    approachTitle: 'I used framing, mapping, and co-creation to build shared understanding',
+    approachPoints: [
+      'Ran stakeholder interviews and co-creation workshops across frontline, compliance, risk, audit, and data protection functions.',
+      'Mapped as-is journeys to make invisible labor and workarounds visible, then validated those maps with participants.',
+      'Synthesized the findings into shared typologies, a pain matrix, and a chain of insights that connected architecture to people impact.',
+    ],
+    outcomeTitle: 'The work created clarity leadership could actually use',
+    outcomePoints: [
+      'Delivered an 88-page co-create report, seven business-unit journey maps, typology profiles, and prioritized initiative proposals.',
+      'Created a shared language for discussing the incident ecosystem without framing any team as the problem.',
+      'Turned systemic findings into concrete transformation directions like a centralized case system, unified dashboard, and one-stop intake model.',
+    ],
+    learningTitle: 'The project reinforced the value of framing in research',
+    learningPoints: [
+      'Systemic framing can unlock more honest conversations than problem framing focused on individual behavior.',
+      'Research becomes far more actionable when people trust both the process and the way findings are represented back to them.',
     ],
   },
   {

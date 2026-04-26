@@ -24,12 +24,10 @@ import { richSitePages } from './content/richSitePages'
 import type { RichSitePage, RichSitePageSection, RichSitePageItem } from './content/richSitePages'
 import { sitePages } from './content/sitePages'
 import { ChatbotFlow } from './chatbot/ChatbotFlow'
-import { WhatIDoPage } from './pages/WhatIDoPage'
 import { WhatIDoDetailPage } from './pages/WhatIDoDetailPage'
 
 type Route =
   | { type: 'home' }
-  | { type: 'what-i-do' }
   | { type: 'case-study'; slug: string }
   | { type: 'page'; slug: string }
   | { type: 'chat' }
@@ -330,7 +328,7 @@ function getRoute(): Route {
   }
 
   if (hash === '/what-i-do' || hash === '/what-i-do/') {
-    return { type: 'what-i-do' }
+    return { type: 'home' }
   }
 
   const match = hash.match(/^\/case-studies\/([^/]+)$/)
@@ -363,7 +361,7 @@ function navigateToPage(slug: string) {
 }
 
 function navigateToWhatIDo() {
-  window.location.hash = '/what-i-do'
+  window.location.hash = '/what-i-do/design'
 }
 
 export function navigateHome() {
@@ -410,7 +408,7 @@ function App() {
   }, [imagePreview])
 
   useEffect(() => {
-    if (route.type !== 'case-study' && route.type !== 'page' && route.type !== 'what-i-do') {
+    if (route.type !== 'case-study' && route.type !== 'page') {
       return
     }
 
@@ -479,8 +477,6 @@ function App() {
 
   if (route.type === 'case-study') {
     content = <CaseStudyPage slug={route.slug} />
-  } else if (route.type === 'what-i-do') {
-    content = <WhatIDoPage />
   } else if (route.type === 'page') {
     content = <WhatIDoDetailPage slug={route.slug} />
   } else {

@@ -13,8 +13,8 @@ const img = (name: string) => byName[name] ?? ''
 export const initiamultisigCaseStudy: RichCaseStudy = {
   slug: 'initia-multisig',
   heroImage: {
-    src: img('image.png'),
-    alt: 'Initia MultiSig overview showing the collaborative wallet interface and supporting workflow references.',
+    src: img('1.png'),
+    alt: 'Initia MultiSig interface showing the account creation and proposal management screens.',
   },
   heroDetails: {
     subtitle: '2024 / Wallet & Governance Tool',
@@ -26,149 +26,119 @@ export const initiamultisigCaseStudy: RichCaseStudy = {
     ],
     duration: ['2 months'],
     methods: [
-      'Acceptance Testing',
-      'Guerrilla Test',
-      'Hi-Fidelity Design',
-      'Information Architecture',
-      'Interactive Prototypes',
-      'User Flow Diagram',
       'User Interview',
       'User Journey Map',
+      'User Flow Diagram',
+      'Information Architecture',
+      'Hi-Fidelity Design',
+      'Interactive Prototypes',
+      'Guerrilla Test',
       'User Stories',
+      'Acceptance Testing',
     ],
     team: [
-      '2x UX/UI Designer (Me)',
+      '2x UX/UI Designer (Me + mentee)',
       '2x Front-End Developers',
-      '1x Back-End Developers',
+      '1x Back-End Developer',
       '1x Product Manager',
     ],
   },
   summary: [
     {
-      emphasis:
-        'Initia Multisig is designed as a core tool for Web3 users, allowing them to create accounts with multiple owners.',
-      body:
-        'It works similarly to juristic or collaborative accounts, supporting secure, decentralized decision-making for organizations, DAOs, or collaborative projects.',
+      emphasis: 'High-quality multisig mockups delivered in one week.',
+      body: 'Stakeholder requirements demanded functional, polished mockups in under a week. By relying on the existing design system and clearly defining states upfront, the first iteration shipped without sacrificing quality or consistency.',
     },
     {
-      emphasis: 'The first iteration had to be functional and user-friendly within just one week.',
-      body:
-        'By incorporating all UI elements into the design system and clearly defining the states of each flow, the initial set of mockups was delivered quickly without compromising quality or standards.',
+      emphasis: 'The design made collaborative account management legible for all users.',
+      body: 'Multisig accounts involve multi-stage workflows — creating accounts, proposing transactions, casting votes, and executing approvals. The design made each stage transparent and approachable without oversimplifying the mechanics.',
     },
     {
-      emphasis: 'The design focused on clarity of information, streamlined interactions, and accessibility for all users.',
-      body:
-        'It followed familiar patterns from other multisig solutions so users transitioning from other networks could feel at home, while still remaining approachable for newcomers.',
+      emphasis: 'The project doubled as a mentorship opportunity.',
+      body: 'After the initial direction was set and approved, I transitioned ownership to another designer and shifted into a mentorship role — an intentional choice that kept delivery moving while supporting team growth.',
     },
   ],
   background:
-    'Initia Multisig is designed as a core tool for Web3 users, allowing them to create accounts with multiple owners, similar to juristic or collaborative accounts. As Initia prepared for its mainnet launch, providing a multisig option became essential to meet the expectations of users familiar with similar solutions on other blockchain networks. By supporting shared account management, Initia Multisig enables secure, decentralized decision-making for organizations, DAOs, or collaborative projects.',
+    'Initia MultiSig is a core Web3 tool that allows users to create shared accounts requiring multiple owner approvals before any action can execute. It is designed for DAOs, teams, and collaborative projects where unilateral control is unacceptable. As Initia prepared for its mainnet launch, multisig support was a baseline expectation for the ecosystem.',
   motivation: [
-    'This project originated from the core team, starting with smart contract development. Due to stakeholder requirements, we needed to create functional and user-friendly mockups within just one week.',
-    'Although the UI design was not overly complex, the bar for the first delivery was high. We quickly developed the initial set of mockups without compromising quality or standards, and were proud to deliver such high-quality work in a very short time.',
+    'Multisig wallets are a well-understood primitive in blockchain, but many implementations feel intimidating — especially for users who are new to on-chain governance. As Initia expanded toward mainnet, providing a multisig tool that was both secure and approachable became a priority.',
+    'I was brought in from the start to lead the design direction, with a goal of shipping polished mockups quickly while maintaining a high standard of quality.',
   ],
   role: [
-    'I was involved in the Initia Multisig project from the start, leading the initial phases to align with stakeholder expectations and define key requirements.',
-    'During the first few weeks, I worked closely with stakeholders and the other designer to shape the project direction and set up the foundational design framework.',
-    'After securing approval, I transitioned the project ownership to a new designer, stepping back into a mentorship role and providing guidance so the new designer could take full charge and grow through the process.',
+    'I led the initial design phases — working with stakeholders to define requirements, aligning on the user journey, and setting up the foundational design framework.',
+    'I delivered the first complete set of mockups within one week, incorporating all primary flows into the design system with full state coverage.',
+    'After approval, I transitioned project ownership to a newer designer and moved into a mentorship role — guiding their work while stepping back from direct execution.',
   ],
+  research: {
+    image: img('2.png'),
+    quote:
+      'Multisig is a well-established pattern — but the main design challenge was making the voting threshold, proposal lifecycle, and execution flow feel transparent rather than opaque.',
+    bullets: [
+      'Reviewed existing multisig implementations on other networks to understand familiar patterns users would bring as expectations.',
+      'Mapped the core user journey: create account → assign members → set threshold → propose → vote → execute.',
+      'Identified the highest-risk friction points: threshold communication, vote state visibility, and proposal expiry logic.',
+    ],
+    quotes: [
+      'People understand the concept of needing multiple approvals. The design challenge is making them confident at each step that the system is doing what they expect.',
+    ],
+  },
   painPoints: [
     {
-      title: 'Only a week for the first iteration',
-      body:
-        'Stakeholder requirements meant the team needed functional and user-friendly mockups in just one week. The challenge was not only speed, but making sure the work still held up in quality, consistency, and state definition.',
-      image: img('image 1.png'),
-      caption:
-        'The first iteration had to move fast while still feeling complete and trustworthy to stakeholders.',
+      title: 'Functional mockups needed in under one week',
+      body: 'Stakeholder requirements were clear: the first iteration had to be high-quality and complete within about one week. This left no room for extended exploration or wireframing — decisions had to be made quickly and confidently from the start.',
+      image: img('3.png'),
+      caption: 'The compressed timeline demanded confident design decisions and full state coverage from day one.',
     },
     {
-      title: 'The workflow spans several stages that can easily become opaque',
-      body:
-        'Users need to create a multisig account, assign members, set a voting threshold, propose actions, cast votes, and execute approved proposals. Without enough clarity at each step, the whole experience could quickly feel intimidating.',
+      title: 'Multi-stage flows that could easily feel opaque',
+      body: 'The multisig workflow spans several distinct phases — account setup, proposal submission, voting, and execution — each with its own state and requirements. Users who lost track of where they were in the process, or what was needed next, would lose confidence quickly.',
+      image: img('4.png'),
+      caption: 'Each phase needed to clearly communicate its state, what action was needed, and what came next.',
     },
     {
-      title: 'The product had to work for both experienced Web3 users and newcomers',
-      body:
-        'Multisig is already a familiar concept to many blockchain users, so the interface needed to respect those expectations. At the same time, the product still had to be understandable for people using this kind of collaborative on-chain account for the first time.',
-      image: img('image 6.png'),
-      caption:
-        'The design had to bridge familiar multisig patterns with a clearer, more approachable first-use experience.',
+      title: 'Bridging experienced Web3 users and newcomers',
+      body: 'Some users would arrive with experience from other multisig tools and strong mental models. Others would be using shared on-chain accounts for the first time. The design had to work for both without treating either group as the exception.',
+      image: img('5.png'),
+      caption: 'Familiar patterns for experienced users, clear guidance for newcomers — both in the same interface.',
     },
   ],
   solutions: [
     {
-      title: 'Create and assign accounts with a visible voting threshold',
-      body:
-        'Users can create a multisig account, assign members, and set a voting threshold. During setup, they define the minimum number of approvals required for a proposal to pass, ensuring no single member can act unilaterally and adding a clear layer of collaborative control.',
-      image: img('image 2.png'),
-      caption:
-        'Account setup makes member assignment and approval threshold visible from the beginning.',
+      title: 'Transparent account setup with voting threshold clarity',
+      body: 'The account creation flow made the relationship between member count and voting threshold immediately visible. Users could see — in plain language — how many approvals would be required before any proposal could execute, and adjust the threshold as they added members.',
+      image: img('6.png'),
+      caption: 'Voting threshold shown as a clear ratio throughout setup, not just at the end.',
     },
     {
-      title: 'Propose transactions in a way that supports real operations',
-      body:
-        'Once the account is established, any member can create and submit proposals for actions the group needs to approve. For the first release, proposals included sending assets, executing MOVE custom messages, and interacting with modules through execute functions.',
-      image: img('image 3.png'),
-      caption:
-        'Proposal creation was designed to support the first-release actions without overcomplicating the flow.',
+      title: 'Proposal lifecycle with persistent status visibility',
+      body: 'Each proposal displayed its current voting status — how many votes it had received, how many were needed, and who had voted — at all times. The proposal detail page made the gap between current and required votes impossible to miss.',
+      image: img('7.png'),
+      caption: 'Proposal status and voting progress visible at a glance throughout the lifecycle.',
     },
     {
-      title: 'Cast votes with clear proposal detail and voting status',
-      body:
-        'When a proposal is submitted, all members are notified to review it and cast votes directly in the interface. The proposal page provides a detailed breakdown of the action, the required voting threshold, and the current voting status, so members can make decisions with confidence.',
-      image: img('image 4.png'),
-      caption:
-        'Proposal detail and vote status stay visible so every member can understand the decision in context.',
-    },
-    {
-      title: 'Execute approved proposals without ambiguity',
-      body:
-        'Once a proposal receives the required number of votes, any member of the multisig account can execute the transaction securely and efficiently. If the proposal fails to reach the voting threshold within a specified period, it expires, preserving the integrity and security of the account.',
-      image: img('image 5.png'),
-      caption:
-        'Execution is straightforward once approval is reached, and expiry is handled transparently when thresholds are not met.',
-    },
-    {
-      title: 'Keep the entire system visually clear and familiar',
-      body:
-        'The design approach focused on clarity of information, streamlined interactions, and accessibility for all users. We avoided flashy or overly complex UI, instead following familiar patterns from other multisig solutions so the experience would feel legible at a glance for advanced users and approachable for newcomers.',
-      image: img('image 6.png'),
-      caption:
-        'The visual system stayed direct and familiar so the workflow mechanics remained the focus.',
+      title: 'Straightforward execution with no ambiguity',
+      body: 'Once a proposal reached its threshold, any member could execute it. The interface made this clearly available without requiring any understanding of which specific member should act. Expired proposals showed their status plainly rather than disappearing without explanation.',
+      image: img('2.png'),
+      caption: 'Execution was a single clear action available to any eligible member after approval.',
     },
   ],
   outcomes: [
     {
-      emphasis: 'The team delivered a polished first iteration within an extremely short timeline.',
-      body:
-        'Even with only a week for the first pass, the mockups stayed functional, user-friendly, and aligned with a high design standard because the states and system were defined clearly up front.',
+      emphasis: 'First iteration delivered in one week without quality compromise.',
+      body: 'By committing to the design system early and defining all states upfront, the team shipped complete, consistent mockups on the stakeholder timeline. The output was praised for its polish given the speed of delivery.',
     },
     {
-      emphasis: 'The design made the common multisig journey much easier to understand.',
-      body:
-        'Create account, propose action, cast votes, and execute approval were all framed as transparent steps, helping the product feel less intimidating without losing the logic of the underlying system.',
-    },
-    {
-      emphasis: 'The project also created space for mentorship and team growth.',
-      body:
-        'Once the direction was approved, ownership could transition to a newer designer while the project kept moving, turning the work into both a delivery success and a learning opportunity inside the team.',
+      emphasis: 'The project created a strong mentorship outcome alongside delivery.',
+      body: 'Transitioning ownership after the initial direction was set gave a newer designer the opportunity to grow through a real project with meaningful scope. The mentor role kept delivery on track while building team capability.',
     },
   ],
   learnings: [
     {
-      title: 'Clear state definition makes fast work possible',
-      body:
-        'The one-week first iteration worked because the flows and states were thought through early. Speed did not come from cutting corners, but from making the design system and workflow structure do more of the heavy lifting.',
+      title: 'Fast design can still be high quality when the system is ready.',
+      body: 'Speed and quality are not opposites — they are managed through preparation. A well-built design system and clear state definitions at the start made it possible to work quickly without accumulating design debt.',
     },
     {
-      title: 'Familiar patterns matter when users bring expectations from other tools',
-      body:
-        'Multisig is already a known concept in Web3. Matching familiar interaction patterns while improving clarity is often more useful than trying to invent a new visual language for its own sake.',
-    },
-    {
-      title: 'Mentorship can be part of the delivery model',
-      body:
-        'Transitioning ownership after approval showed that delivery and mentoring do not need to be separate tracks. A strong foundation can create room for both high-quality output and team growth.',
+      title: 'Mentorship can be part of delivery, not separate from it.',
+      body: 'Handing ownership to another designer is not a risk to delivery when the foundation is clear enough for them to build on. Structured mentorship within a real project produces better results than practice assignments.',
     },
   ],
 }

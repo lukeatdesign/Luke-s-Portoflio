@@ -1,0 +1,25 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:woolly-uncle-6fe.notion.site)",
+      "mcp__Claude_Preview__preview_start",
+      "Bash(ping -n 3 127.0.0.1)",
+      "Bash(ping -n 4 127.0.0.1)",
+      "Bash(npx tsc:*)",
+      "Bash(npm run:*)",
+      "Bash(python3 -c \"from PIL import Image; img = Image.open\\(\\\\\"C:/Sandbox/Luke's Portoflio/src/assets/case_studies_thumbnails/markr.png\\\\\"\\); print\\(img.size, img.mode\\)\")",
+      "PowerShell(New-Item -ItemType Directory -Force -Path \"C:\\\\Sandbox\\\\Luke's Portoflio\\\\files\\\\docs\")",
+      "PowerShell(Head -20)",
+      "PowerShell(Get-ChildItem \"C:\\\\Sandbox\" -Directory | Select-Object -First 20 | ForEach-Object { $_.FullName })",
+      "Bash(npm install *)",
+      "Bash(netstat -ano)",
+      "Bash(findstr :3001)",
+      "Bash(taskkill /PID 75260 /F)",
+      "PowerShell(Stop-Process -Id 75260 -Force)",
+      "PowerShell($p = Get-NetTCPConnection -LocalPort 3001 -ErrorAction SilentlyContinue | Select-Object -ExpandProperty OwningProcess -First 1; if \\($p\\) { Stop-Process -Id $p -Force; \"Killed $p\" } else { \"Nothing on 3001\" })",
+      "Bash(curl -s -X POST http://localhost:3001/onboarding -H 'Content-Type: application/json' -d '{\"persona\":\"recruiter\",\"history\":[]}')",
+      "Bash(curl -s http://localhost:5173)",
+      "Bash(curl -s -X POST http://localhost:3001/onboarding -H \"Content-Type: application/json\" -d '{\"persona\":\"recruiter\",\"history\":[]}')"
+    ]
+  }
+}

@@ -97,7 +97,7 @@ export const ladderCaseStudy: RichCaseStudy = {
     {
       title: 'Dashboard charts that were not meaningful',
       body: 'The original dashboard had been built by engineers without data visualization expertise. Charts existed but did not surface insight — users could see numbers without being able to understand what they meant or what actions they implied.',
-      image: img('4.png'),
+      image: img('4.jpg'),
       caption: 'Charts displayed data without delivering insight — users had to interpret everything manually.',
     },
     {

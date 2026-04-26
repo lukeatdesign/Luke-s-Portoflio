@@ -421,6 +421,49 @@ export const caseStudies: CaseStudy[] = [
     ],
   },
   {
+    slug: 'wayfarer',
+    thumbnail: '',
+    title: 'Wayfarer',
+    kicker: 'Immigration Assistant',
+    meta: 'Independent / Hackathon Assignment - 2026',
+    duration: '2 weeks.',
+    role: 'Solo Designer & Builder turning UX thinking into a vibe-coded functional prototype.',
+    summary:
+      'Turned a complex, document-heavy Thailand work visa process into a guided companion - from onboarding and consultant chat through roadmap, documents, and application status.',
+    tags: ['Desktop', 'Mobile'],
+    highlights: [
+      'Built as a functional prototype in 2 weeks.',
+      'Reframed the idea from generic chatbot to visa companion.',
+      'Used UX decisions directly in code rather than static mockups.',
+    ],
+    contextTitle: 'A guided immigration companion instead of a blank chat box',
+    contextSummary:
+      'Wayfarer was designed for people like Mo Rakat - skilled, ready to relocate, but completely new to Thai immigration. The product needed to feel supportive, contextual, and easy to follow rather than overwhelming.',
+    challengeTitle: 'The hardest part was making a stressful process feel guided',
+    challengePoints: [
+      "Users do not know what they don't know in a visa process.",
+      'A chatbot alone does not provide enough structure when users are under pressure.',
+      'Task ownership, document readiness, and application progress all need to feel explicit.',
+    ],
+    approachTitle: 'I designed the journey as a companion experience',
+    approachPoints: [
+      'Captured user context up front through onboarding so the product could respond personally.',
+      'Split roadmap tasks by ownership and turned each step into focused guidance.',
+      'Used dashboards, checklists, and progress states to reduce ambiguity and keep momentum visible.',
+    ],
+    outcomeTitle: 'The prototype demonstrated how UX thinking can live inside code',
+    outcomePoints: [
+      'The experience covered onboarding, chat, roadmap, documents, status, and completion in one connected flow.',
+      'The work proved that vibe-coded prototypes can be used for concept testing and stakeholder alignment.',
+      'It also opened a path toward broader future support such as document checking, voice input, and agent mode.',
+    ],
+    learningTitle: 'The project changed how I think about design deliverables',
+    learningPoints: [
+      'Working product behavior can communicate design intent more fully than static screens alone.',
+      'Learning through building made the design process more concrete and more complete.',
+    ],
+  },
+  {
     slug: 'ladder',
     thumbnail: ladderThumbnail,
     title: 'Ladder',

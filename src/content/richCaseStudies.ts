@@ -7,6 +7,7 @@ import { verticalprotocolCaseStudy } from './verticalprotocolCaseStudy'
 import { rentpaymentCaseStudy } from './rentpaymentCaseStudy'
 import { markrCaseStudy } from './markrCaseStudy'
 import { ladderCaseStudy } from './ladderCaseStudy'
+import { wayfarerCaseStudy } from './wayfarerCaseStudy'
 
 export const richCaseStudies: Record<string, RichCaseStudy> = {
   'alpha-homora-v2': alphahomorav2CaseStudy,
@@ -17,4 +18,5 @@ export const richCaseStudies: Record<string, RichCaseStudy> = {
   'rent-payment': rentpaymentCaseStudy,
   markr: markrCaseStudy,
   ladder: ladderCaseStudy,
+  wayfarer: wayfarerCaseStudy,
 }

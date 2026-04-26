@@ -2208,6 +2208,42 @@ ul {
   box-shadow: 0 0 0.9rem 0.18rem rgba(244, 183, 200, 0.18);
 }
 
+.what-i-do-page-shell .case-hero-grid {
+  grid-template-columns: minmax(0, 1.12fr) minmax(18rem, 0.88fr);
+  align-items: end;
+}
+
+.what-i-do-page-shell .case-hero-copy {
+  max-width: 50rem;
+}
+
+.what-i-do-side-panel {
+  display: grid;
+  gap: 1rem;
+  align-content: start;
+}
+
+.what-i-do-side-note {
+  margin: 0;
+  max-width: none;
+}
+
+.what-i-do-content .strengths-section {
+  padding-top: 0.4rem;
+}
+
+.what-i-do-index-grid {
+  margin-top: 0.35rem;
+}
+
+.what-i-do-index-grid .strength-card {
+  min-height: 100%;
+}
+
+.what-i-do-index-grid .card-link-row {
+  margin-top: auto;
+}
+
 .rich-outcome-panel {
   grid-area: auto;
   width: 100%;

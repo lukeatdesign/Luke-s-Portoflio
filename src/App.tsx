@@ -24,9 +24,12 @@ import { richSitePages } from './content/richSitePages'
 import type { RichSitePage, RichSitePageSection, RichSitePageItem } from './content/richSitePages'
 import { sitePages } from './content/sitePages'
 import { ChatbotFlow } from './chatbot/ChatbotFlow'
+import { WhatIDoPage } from './pages/WhatIDoPage'
+import { WhatIDoDetailPage } from './pages/WhatIDoDetailPage'
 
 type Route =
   | { type: 'home' }
+  | { type: 'what-i-do' }
   | { type: 'case-study'; slug: string }
   | { type: 'page'; slug: string }
   | { type: 'chat' }
@@ -45,28 +48,28 @@ const strengths = [
     title: 'Product Design',
     description:
       'I combine design principles, user psychology, and practical product work to create interfaces that meet business goals, respect technical constraints, and feel intuitive in use.',
-    href: '#/pages/design',
+    href: '#/what-i-do/design',
     icon: SparklesIcon,
   },
   {
     title: 'Leading & management',
     description:
       'I often step into lead responsibilities, from setting quality bars and team standards to mentoring designers and helping design teams operate with more confidence.',
-    href: '#/pages/leadership',
+    href: '#/what-i-do/leadership',
     icon: UserGroupIcon,
   },
   {
     title: 'Hiring & onboarding',
     description:
       'I have supported hiring loops, written plans and job descriptions, interviewed candidates, and helped create stronger onboarding experiences for growing teams.',
-    href: '#/pages/hiring',
+    href: '#/what-i-do/hiring',
     icon: BriefcaseIcon,
   },
   {
     title: 'Upskilling people & myself',
     description:
       'My articles on UX/UI growth have been widely shared, and that work has opened doors to teaching, speaking, and helping other designers build stronger foundations.',
-    href: '#/pages/upskilling',
+    href: '#/what-i-do/upskilling',
     icon: AcademicCapIcon,
   },
 ]
@@ -326,10 +329,20 @@ function getRoute(): Route {
     return { type: 'chat' }
   }
 
+  if (hash === '/what-i-do' || hash === '/what-i-do/') {
+    return { type: 'what-i-do' }
+  }
+
   const match = hash.match(/^\/case-studies\/([^/]+)$/)
 
   if (match) {
     return { type: 'case-study', slug: match[1] }
+  }
+
+  const whatIDoPageMatch = hash.match(/^\/what-i-do\/([^/]+)$/)
+
+  if (whatIDoPageMatch) {
+    return { type: 'page', slug: whatIDoPageMatch[1] }
   }
 
   const pageMatch = hash.match(/^\/pages\/([^/]+)$/)
@@ -349,7 +362,11 @@ function navigateToPage(slug: string) {
   window.location.hash = `/pages/${slug}`
 }
 
-function navigateHome() {
+function navigateToWhatIDo() {
+  window.location.hash = '/what-i-do'
+}
+
+export function navigateHome() {
   window.location.hash = '/'
 }
 
@@ -393,7 +410,7 @@ function App() {
   }, [imagePreview])
 
   useEffect(() => {
-    if (route.type !== 'case-study') {
+    if (route.type !== 'case-study' && route.type !== 'page' && route.type !== 'what-i-do') {
       return
     }
 
@@ -462,8 +479,10 @@ function App() {
 
   if (route.type === 'case-study') {
     content = <CaseStudyPage slug={route.slug} />
+  } else if (route.type === 'what-i-do') {
+    content = <WhatIDoPage />
   } else if (route.type === 'page') {
-    content = <SitePageView slug={route.slug} />
+    content = <WhatIDoDetailPage slug={route.slug} />
   } else {
     content = <HomePage />
   }
@@ -598,7 +617,7 @@ function RichSitePageView({ page }: { page: RichSitePage }) {
           </a>
           <div className="nav-links">
             <a href="#/">Home</a>
-            <button className="nav-link-button" onClick={navigateHome} type="button">
+            <button className="nav-link-button" onClick={navigateToWhatIDo} type="button">
               What I Do
             </button>
           </div>
@@ -1066,7 +1085,7 @@ function CaseStudyPage({ slug }: { slug: string }) {
           </a>
           <div className="nav-links">
             <a href="#/">Home</a>
-            <button className="nav-link-button" onClick={navigateHome} type="button">
+            <button className="nav-link-button" onClick={navigateToWhatIDo} type="button">
               What I Do
             </button>
           </div>
@@ -1219,7 +1238,7 @@ function CelatoneCaseStudyPage({ study }: { slug?: string; study: (typeof caseSt
           </a>
           <div className="nav-links">
             <a href="#/">Home</a>
-            <button className="nav-link-button" onClick={navigateHome} type="button">
+            <button className="nav-link-button" onClick={navigateToWhatIDo} type="button">
               What I Do
             </button>
           </div>
@@ -1652,7 +1671,7 @@ function CelatoneCaseStudyPage({ study }: { slug?: string; study: (typeof caseSt
   )
 }
 
-function SitePageView({ slug }: { slug: string }) {
+export function SitePageView({ slug }: { slug: string }) {
   const richPage = richSitePages[slug]
 
   if (richPage) {
@@ -1674,7 +1693,7 @@ function SitePageView({ slug }: { slug: string }) {
           </a>
           <div className="nav-links">
             <a href="#/">Home</a>
-            <button className="nav-link-button" onClick={navigateHome} type="button">
+            <button className="nav-link-button" onClick={navigateToWhatIDo} type="button">
               What I Do
             </button>
           </div>
@@ -1750,7 +1769,7 @@ function InitiaScanCaseStudyPage({ study }: { study: (typeof caseStudies)[number
           </a>
           <div className="nav-links">
             <a href="#/">Home</a>
-            <button className="nav-link-button" onClick={navigateHome} type="button">
+            <button className="nav-link-button" onClick={navigateToWhatIDo} type="button">
               What I Do
             </button>
           </div>
@@ -2098,7 +2117,7 @@ function RichCaseStudyPage({
           </a>
           <div className="nav-links">
             <a href="#/">Home</a>
-            <button className="nav-link-button" onClick={navigateHome} type="button">
+            <button className="nav-link-button" onClick={navigateToWhatIDo} type="button">
               What I Do
             </button>
           </div>
@@ -2439,7 +2458,7 @@ function NotFound() {
     <div className="page-shell not-found-shell">
       <div className="not-found-card">
         <p className="section-label">Not Found</p>
-        <h1>This case study page does not exist yet.</h1>
+        <h1>This page does not exist yet.</h1>
         <a className="button button-primary" href="#/">
           Back to homepage
         </a>

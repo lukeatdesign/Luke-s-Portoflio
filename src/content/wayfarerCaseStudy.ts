@@ -72,21 +72,29 @@ export const wayfarerCaseStudy: RichCaseStudy = {
       body:
         "Mo is skilled and ready, but completely new to Thai immigration. The problem is not just forms - it's the fact that she doesn't know what she doesn't know, and the process can feel overwhelming when each step depends on hidden context.",
       image: img('overview.jpeg'),
-      caption: '',
+      caption: 'The dashboard makes the complexity visible, but also shows how much guidance the experience needs to provide.',
     },
     {
       title: 'A generic chatbot is not enough at the moment people feel stressed',
       body:
         "Thinking about Mo at 11pm the night before her visa appointment made it clear that a chatbot that only answers questions isn't enough. A compass shows you where you are and where you're going.",
       image: img('generalchattoroadmap.jpeg'),
-      caption: '',
+      caption: 'The experience needed to move beyond reactive chat and proactively surface what changed next.',
     },
     {
       title: 'Users need clarity about ownership, progress, and what happens next',
       body:
         "One of the most confusing parts of immigration is not knowing which tasks are yours to handle, which belong to your employer, and whether you're actually making progress through the process.",
       image: img('personalizedroadmap.jpeg'),
-      caption: '',
+      caption: 'Splitting the roadmap by ownership turns a vague process into something users can actually follow.',
+    },
+  ],
+  processImages: [
+    {
+      src: img('promptupdated.jpeg'),
+      label: 'AI improvement loop',
+      caption:
+        'The consultant view exposes how a better human reply updates the prompt, making the assistant more useful on the next conversation.',
     },
   ],
   solutions: [
@@ -95,56 +103,56 @@ export const wayfarerCaseStudy: RichCaseStudy = {
       body:
         "Nationality, job offer status, current visa, and urgency are collected during onboarding so the system has enough information to proceed to the roadmap and carry this into every part of the experience. The consultant never re-asks what it already knows. That's a respect for the user's time.",
       image: img('onboarding.jpeg'),
-      caption: '',
+      caption: 'The seven-step onboarding flow establishes the context that powers the rest of the journey.',
     },
     {
       title: 'Chat that already knows its context',
       body:
         "Once the quiz is complete, the consultant already knows who Mo is. The roadmap ready card surfaces inline in the conversation - the user doesn't need to navigate away to know something has changed. The right panel shows current task context, and the sidebar separates general questions from task-specific threads.",
       image: img('generalchattoroadmap.jpeg'),
-      caption: '',
+      caption: 'The consultant chat surfaces progress inline instead of forcing users to hunt for the next step.',
     },
     {
       title: 'Roadmap split into what you own and what your employer owns',
       body:
         'The roadmap generates two separate lists - user tasks and employer tasks - with priority badges, status indicators, and subtasks for each. This single decision reduces a lot of anxiety.',
       image: img('personalizedroadmap.jpeg'),
-      caption: '',
+      caption: 'Separating user tasks from employer tasks reduces ambiguity at the most stressful part of the process.',
     },
     {
       title: 'Task-specific chat threads for focused guidance',
       body:
         'Every task on the roadmap can be expanded into a focused chat thread with context already loaded. The right panel shows the task subtasks, its blocked status if relevant, and a Mark as done action. The AI knows which step Mo is on and guides accordingly.',
       image: img('task_specific_chat.jpeg'),
-      caption: '',
+      caption: 'Focused task threads keep guidance specific, contextual, and easier to act on.',
     },
     {
       title: 'Self-learning AI through the Consultant View',
       body:
         'There is a Consultant View button at the top right of the chat page. From there, a human can submit a better consultant reply - the AI compares its own response against the improved version and rewrites its system prompt to close the gap. This really belongs in a back-office system, but it surfaces here for demo purposes to show the self-learning loop working in real time.',
       image: img('improveai.jpeg'),
-      caption: '',
+      caption: 'The consultant view lets a human improve the reply and feed that learning back into the system.',
     },
     {
       title: 'Dashboard overview in a trusted-friend voice',
       body:
         'The dashboard generates a warm 2-3 sentence status update - your name, where you are in the process, what is next. Written in a friendly way without any jargon. No bullets.',
       image: img('overview.jpeg'),
-      caption: '',
+      caption: 'A concise status overview makes the product feel more like a companion than a generic assistant.',
     },
     {
       title: 'Documents with clear progress and a closed loop',
       body:
         'A simple checklist with a progress bar. When all documents are ready, a completion banner appears and the user is prompted back to the roadmap. Straightforward, but it closes a loop that would otherwise feel open-ended.',
       image: img('doc.jpeg'),
-      caption: '',
+      caption: 'The document checklist closes an otherwise open-ended loop with visible progress and completion feedback.',
     },
     {
       title: 'Application status timeline that acknowledges progress',
       body:
         'A 5-stage visual timeline of the full application journey. Each stage has a completion date or estimate. Advancing a stage triggers a sparkle burst, checkbox bounce, and text brightening - because users typically land on this page when something new is completed, and the animation is there to acknowledge that moment.',
       image: img('status.jpeg'),
-      caption: '',
+      caption: 'A staged timeline gives the application process visible momentum instead of leaving users in limbo.',
     },
   ],
   outcomes: [

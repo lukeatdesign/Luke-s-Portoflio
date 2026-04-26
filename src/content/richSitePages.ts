@@ -151,7 +151,7 @@ export const richSitePages: Record<string, RichSitePage> = {
             },
             imagePosition: 'right',
             markdown:
-              'I firmly believe that **communication is a crucial skill** for designers, given the challenge of ensuring that both business stakeholders and developers accurately understand design solutions and their underlying intentions.\n\nI make every effort to **convey** the right information and **actively listen** to others\' opinions and constraints.\n\nThis involves conducting **design demos** during the delivery process, writing detailed **design notes** to confirm the correctness of interface behavior, and **maintaining constant communication** with everyone involved throughout development to ensure the implementation is complete and accurate.',
+              'I firmly believe that **communication is a crucial skill** for designers, given the challenge of ensuring that both business stakeholders and developers accurately understand design solutions and their underlying intentions.\n\nI make every effort to **convey** the right information and **actively listen** to others\' opinions and constraints.\n\nThat means walking teams through the intent behind decisions, clarifying edge cases early, and **maintaining constant communication** throughout delivery so the final experience stays aligned with the original design goals.',
           },
         ],
       },
@@ -192,7 +192,7 @@ export const richSitePages: Record<string, RichSitePage> = {
         },
         imagePosition: 'left',
         markdown:
-          'I think it\'s very essential for the company to align the expectations between each party from the company goal to each individual goal. Especially the product wise, to align between business, tech, and design are the utmost important factor to steering the successful product discovery and development.\n\n## Company-wide process\n\nWhen I joined the startup, they typically operated in a way that best suited their immediate needs. However, this freestyle approach often led to common problems, resulting in a buildup of technical and design debt.\n\nI use this opportunity to revamp our methods, incorporating ideas I learned from various sources, primarily focusing on **\'SCRUM\'** and **\'Product Discovery.\'** I tailored these concepts to maintain flexibility, ensuring the process was neither too cumbersome nor too lax.\n\n## Software development process\n\nAs I mentioned about working in SCRUM environment, I still found that many principles are quite unfit with several of company demands or some team member styles. So we are just sticked with the essential artifacts such as creating meaningful tickets, definable sprint goals, and lean checkups.\n\nAs a designer, it is very important to ensure that every party is on the same page. So we came up with the process that designers are **fully integrated with the agile environment by become a dedicated resource** with in the software development team.',
+          'I think it\'s very essential for the company to align the expectations between each party from the company goal to each individual goal. Especially the product wise, to align between business, tech, and design are the utmost important factor to steering the successful product discovery and development.\n\n## Company-wide process\n\nWhen I joined the startup, they typically operated in a way that best suited their immediate needs. However, this freestyle approach often led to common problems, resulting in a buildup of technical and design debt.\n\nI use this opportunity to revamp our methods, incorporating ideas I learned from various sources, primarily focusing on **\'SCRUM\'** and **\'Product Discovery.\'** I tailored these concepts to maintain flexibility, ensuring the process was neither too cumbersome nor too lax.\n\n## Software development process\n\nEven while working in a SCRUM environment, I found that many textbook principles did not fully fit the company\'s pace and constraints. So we kept the process lean and focused on the essentials: clear work scopes, definable sprint goals, and regular check-ins.\n\nAs a designer, it is very important to ensure that every party is on the same page. So we came up with the process that designers are **fully integrated with the agile environment by become a dedicated resource** with in the software development team.',
       },
       {
         label: 'The Design',
@@ -218,7 +218,7 @@ export const richSitePages: Record<string, RichSitePage> = {
             },
             imagePosition: 'right',
             markdown:
-              '> Need it in a few days? That sounds like enough time to create the components and variants.\n\nI firmly believe in the principle that **\"slow is smooth, and smooth is fast.\"** This means that even when projects face tight deadlines, I insist that all designers **prepare their work for potential changes.** This includes creating reusable components, detailing all possible states, and ensuring complete handoffs to developers.\n\nContrary to the traditional software development process, where designers typically focus on user research and simply deliver design solutions, I **encourage our designers to take ownership of writing the developers\' tasks, complete with acceptance criteria, and also conduct the acceptance tests.**\n\nThis ensures the correctness of the developed features and requires designers to fully **understand both the business goals of the product and its technical limitations** to fulfill this responsibility effectively.',
+              '> Need it in a few days? That sounds like enough time to create the components and variants.\n\nI firmly believe in the principle that **\"slow is smooth, and smooth is fast.\"** This means that even when projects face tight deadlines, I insist that all designers **prepare their work for potential changes.** This includes creating reusable components, detailing all possible states, and ensuring complete handoffs to developers.\n\nRather than stopping at mockups, I encourage designers to stay deeply involved through specification, review, and iteration so the final product still reflects the original intent.\n\nThis requires designers to fully **understand both the business goals of the product and its technical limitations** so they can make good trade-offs without sacrificing quality.',
           },
         ],
       },
@@ -274,7 +274,7 @@ export const richSitePages: Record<string, RichSitePage> = {
         },
         imagePosition: 'left',
         markdown:
-          'I usually responsible for defining the job descriptions for the job posts that related to the company situations to be as **specific as possible.**\n\nAs the hiring process would require a lot of time and effort to complete, I tried to came up with the plan that utilizing the times and resources efficiently from create the **skill checklist and doing the 30 minutes call** for filtering the candidates.',
+          'I usually responsible for defining the job descriptions for the job posts that related to the company situations to be as **specific as possible.**\n\nAs the hiring process would require a lot of time and effort to complete, I tried to came up with the plan that utilizing the times and resources efficiently, from creating clear **screening standards** to using a focused **30 minute call** for filtering the candidates.',
       },
       {
         label: 'Hiring',
@@ -327,74 +327,12 @@ export const richSitePages: Record<string, RichSitePage> = {
         imagePosition: 'left',
         markdown:
           '> Currently, I have been learning through **32 courses and 6 Master Classes** in Interaction Design Foundation, **12 courses** in Uxcel, and gained the **Google UX Design Specialization** certificate while completed **7 courses.** [See all list of certificates in LinkedIn.](https://www.linkedin.com/in/lookchin/details/certifications/)\n\nWhen I first transitioned to UX/UI Design, I felt like I was using just "my common sense" to identify problems and create solutions. I believed I might be on the right track but was truly not confident **due to not having any knowledgeable backup.**\n\nI realized I had to be more proactive about my design skills. So, I decided to start learning through the **Interaction Design Foundation**, an online learning platform that focuses on psychology-based and established academic subjects.\n\nAfter I found myself **improving** from the learning and able to **apply** those skills to my work, I tried my best to **maintain consistency** in learning and reading books.',
-        footerTitle: 'Learning catalogue',
+        footerTitle: 'Learning focus',
         footerMarkdown:
-          '- **32 Courses** in Interaction Design Foundation\n' +
-          '  - **Human-Computer Interactions**\n' +
-          '    - [**Human-Computer Interaction - HCI**](https://www.interaction-design.org/members/supasinan-pisanuwongrak/certificate/course/9dab76ea-0932-419c-8e38-e65379aa7fba?certificateType=course)\n' +
-          '    - [**Accessibility: How to Design for All**](https://www.interaction-design.org/members/supasinan-pisanuwongrak/certificate/course/750227b3-2d65-42f2-a73d-60b381bd3b72?certificateType=course)\n' +
-          '    - [**Human-Computer Interaction: The Foundations of UX Design**](https://www.interaction-design.org/members/supasinan-pisanuwongrak/certificate/course/aa89db52-075a-461d-87df-2d322b3007c6)\n' +
-          '    - [**Perception and Memory in HCI and UX**](https://www.interaction-design.org/members/supasinan-pisanuwongrak/certificate/course/1c90e219-ffab-4047-983e-bbf12eeb44c2)\n' +
-          '  - **Interaction Design**\n' +
-          '    - [**Interaction Design for Usability**](https://www.interaction-design.org/members/supasinan-pisanuwongrak/certificate/course/f6baf456-07f8-442d-be59-4bf53191e07a?certificateType=course)\n' +
-          '    - [**Psychology of Interaction Design: The Ultimate Guide**](https://www.interaction-design.org/members/supasinan-pisanuwongrak/certificate/course/6ec6c90e-ca70-49d4-a446-382f7d1017bc?certificateType=course)\n' +
-          '  - **Visual Design**\n' +
-          '    - [**Gestalt Psychology and Web Design: The Ultimate Guide**](https://www.interaction-design.org/members/supasinan-pisanuwongrak/certificate/course/022bf14a-e060-48ba-92bd-27efc869b4b2?certificateType=course)\n' +
-          '    - [**The Ultimate Guide to Visual Perception and Design**](https://www.interaction-design.org/members/supasinan-pisanuwongrak/certificate/course/a33af3be-c9b0-477f-9692-3b72d5ff6479?certificateType=course)\n' +
-          '    - [**Information Visualization: Getting Dashboards Right**](https://www.interaction-design.org/members/supasinan-pisanuwongrak/certificate/course/5eb7f9a7-2a14-47e2-91dd-815b48f8f576?certificateType=course)\n' +
-          '    - [**Information Visualization**](https://www.interaction-design.org/members/supasinan-pisanuwongrak/certificate/course/fltqnHSHvPxhn5wt3S?certificateType=course)\n' +
-          '  - **Usability Expert**\n' +
-          '    - [**The Practical Guide to Usability**](https://www.interaction-design.org/members/supasinan-pisanuwongrak/certificate/course/5a46eb41-77b3-47d5-886e-bcb99011cc65)\n' +
-          '    - [**Web Design for Usability**](https://www.interaction-design.org/members/supasinan-pisanuwongrak/certificate/course/c68704cf-69a0-4c76-b576-ed4b0a1217c7?certificateType=course)\n' +
-          '    - [**Conducting Usability Testing**](https://www.interaction-design.org/members/supasinan-pisanuwongrak/certificate/course/58cd21af-7253-4a48-a88f-a08861312469?certificateType=course)\n' +
-          '    - [**Dynamic User Experience: Design and Usability**](https://www.interaction-design.org/members/supasinan-pisanuwongrak/certificate/course/4e890cc3-5a0f-4029-8554-7405f2825a45)\n' +
-          '  - **Product and UX Management**\n' +
-          '    - [**UX Management: Strategy and Tactics**](https://www.interaction-design.org/members/supasinan-pisanuwongrak/certificate/course/25c65a33-5a6c-4390-ab09-1dfa3a4c0e80?certificateType=course)\n' +
-          '    - [**Agile Methods for UX Design**](https://www.interaction-design.org/members/supasinan-pisanuwongrak/certificate/course/a41cdcb2-15d3-442f-864b-bf88cae1a745)\n' +
-          '    - [**Get Your Product Used: Adoption and Appropriation**](https://www.interaction-design.org/members/supasinan-pisanuwongrak/certificate/course/5ede9240-a812-4b82-9d78-5a20b0ddedab?certificateType=course)\n' +
-          '  - **Design Disciplines**\n' +
-          '    - [**Affordances: Designing Intuitive User Interfaces**](https://www.interaction-design.org/members/supasinan-pisanuwongrak/certificate/course/9ec581d5-0371-4bba-b5a8-0e7daf0e0840?certificateType=course)\n' +
-          '    - [**How to Create Intuitive Products by Imitating Physicality**](https://www.interaction-design.org/members/supasinan-pisanuwongrak/certificate/course/f4acad5f-31dd-4d99-938a-e32581120003)\n' +
-          '    - [**Gamification - Creating Addictive User Experiences**](https://www.interaction-design.org/members/supasinan-pisanuwongrak/certificate/course/4f2b32a7-57fc-4297-9246-d60dc2e17f50?certificateType=course)\n' +
-          '    - [**Service Design: Design Integrated Service Experiences**](https://www.interaction-design.org/members/supasinan-pisanuwongrak/certificate/course/46f20a6a-d489-4315-a7d8-768da967d747?certificateType=course)\n' +
-          '    - [**The Brain and Technology: Brain Science in Interface Design**](https://www.interaction-design.org/members/supasinan-pisanuwongrak/certificate/course/2fb2c62c-b6b4-4d64-a96f-278a63eb7476?certificateType=course)\n' +
-          '    - [**Emotional Design - Make Products People Will Love**](https://www.interaction-design.org/members/supasinan-pisanuwongrak/certificate/course/1bdd5423-502d-4203-9972-08ce5d214daf?certificateType=course)\n' +
-          '    - [**Creativity: Design Better Products and Services**](https://www.interaction-design.org/members/supasinan-pisanuwongrak/certificate/course/ccad3348-3597-4414-b56d-119fc5236fa1?certificateType=course)\n' +
-          '  - **Design Practices**\n' +
-          '    - [**User Research - Methods and Best Practices**](https://www.interaction-design.org/members/supasinan-pisanuwongrak/certificate/course/dbcc7653-baf7-4a0a-86f3-eccbc132b917?certificateType=course)\n' +
-          '    - [**UI Design Patterns for Successful Software**](https://www.interaction-design.org/members/supasinan-pisanuwongrak/certificate/course/0c3b5eaa-4906-459c-b9a6-fd35abc74c9b?certificateType=course)\n' +
-          '    - [**Mobile User Experience (UX) Design**](https://www.interaction-design.org/members/supasinan-pisanuwongrak/certificate/course/2fb74bd4-bd19-433a-9535-6022c6d65ccf?certificateType=course)\n' +
-          '    - [**Data-Driven Design: Quantitative Research for UX**](https://www.interaction-design.org/members/supasinan-pisanuwongrak/certificate/course/a9afbdb2-53fe-49dd-94be-cde79044160c?certificateType=course)\n' +
-          '    - [**Conducting Usability Testing**](https://www.interaction-design.org/members/supasinan-pisanuwongrak/certificate/course/58cd21af-7253-4a48-a88f-a08861312469?certificateType=course)\n' +
-          '  - **Miscellaneous**\n' +
-          '    - [**Design for a Better World with Don Norman**](https://www.interaction-design.org/members/supasinan-pisanuwongrak/certificate/course/ab19c12d-aece-4324-9d37-08c98d4faab4)\n' +
-          '    - [**Design for the 21st Century with Don Norman**](https://www.interaction-design.org/members/supasinan-pisanuwongrak/certificate/course/4108fe47-24b2-4067-a1a2-7464e750d997?certificateType=course)\n' +
-          '    - [**Psychology of E-Commerce: How to Sell Online**](https://www.interaction-design.org/members/supasinan-pisanuwongrak/certificate/course/24d69ea8-5ed5-4fb0-acbb-7590b02e0061?certificateType=course)\n' +
-          '    - [**How to Create a UX Portfolio**](https://www.interaction-design.org/members/supasinan-pisanuwongrak/certificate/course/27441a58-74a5-4ec7-8d26-91bfdf5d59a2?certificateType=course)\n\n' +
-          '- **6 Master Classes** in Interaction Design Foundation\n' +
-          '  - [**How to Create Complex Tables Users Love: A UI Designer\'s Guide**](https://www.interaction-design.org/members/supasinan-pisanuwongrak/certificate/masterclass/mcc_33072bbc06ad4543a8ac63d17bcccece)\n' +
-          '  - [**Top 10 Things Designers Need to Know About People**](https://www.interaction-design.org/members/supasinan-pisanuwongrak/certificate/masterclass/mcc_e58587b8b2b34079873eaec2c03528bf)\n' +
-          '  - [**UX Writing: How To Use Words As A Design Power Tool**](https://www.interaction-design.org/members/supasinan-pisanuwongrak/certificate/masterclass/mcc_63b77782f3f54c1c835b64b101e35c73)\n' +
-          '  - [**How (and When) To Run A Design Sprint**](https://www.interaction-design.org/members/supasinan-pisanuwongrak/certificate/masterclass/mcc_28a4a5526f2143d68971ac57eb5a83c0)\n' +
-          '  - [**Achieve 10X Better Designs Through Semantic Interaction Design**](https://www.interaction-design.org/members/supasinan-pisanuwongrak/certificate/masterclass/mcc_46b99ef067994b2585d5cadece35ea02)\n' +
-          '  - [**Design with Data: A Guide to A/B Testing**](https://www.interaction-design.org/members/supasinan-pisanuwongrak/certificate/masterclass/mcc_4619b61924e648618ca868190e880bc7)\n\n' +
-          '- **7 Courses** from Google UX Design Specialization\n' +
-          '  - [**Foundations of User Experience (UX) Design**](https://www.coursera.org/account/accomplishments/verify/FAUTEEE3XLPW?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=course)\n' +
-          '  - [**Start the UX Design Process: Empathize, Define, and Ideate**](https://www.coursera.org/account/accomplishments/verify/HLWV7YV2A53S?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=course)\n' +
-          '  - [**Build Wireframes and Low-Fidelity Prototypes**](https://www.coursera.org/account/accomplishments/verify/DYCNX954PDTR?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=course)\n' +
-          '  - [**Create High-Fidelity Designs and Prototypes in Figma**](https://www.coursera.org/account/accomplishments/verify/KG9JB4NURJAK)\n' +
-          '  - [**Build Dynamic User Interfaces (UI) for Websites**](https://www.coursera.org/account/accomplishments/verify/URVP2UYR6C2A)\n' +
-          '  - [**Conduct UX Research and Test Early Concepts**](https://www.coursera.org/account/accomplishments/verify/DJ35HM7KGDA3?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=course)\n' +
-          '  - [**Design a User Experience for Social Good & Prepare for Jobs**](https://www.coursera.org/account/accomplishments/certificate/K5266T4U2WGQ)\n\n' +
-          '- **7 Courses** in Uxcel\n' +
-          '  - [**UI Components I**](https://app.uxcel.com/certificates/YA6L6YLSWK5T)\n' +
-          '  - [**UI Components II**](https://app.uxcel.com/certificates/NQIK1MZWPOG9)\n' +
-          '  - [**Service Design**](https://app.uxcel.com/certificates/VRYYG5W7XHP9)\n' +
-          '  - [**Design Composition**](https://app.uxcel.com/certificates/42AO671GPRBW)\n' +
-          '  - [**Design Accessibility**](https://app.uxcel.com/certificates/K29PV69NX53C)\n' +
-          '  - [**UX Design Patterns with Checklist Design**](https://app.uxcel.com/certificates/YHID3D3U8WKO)\n' +
-          '  - [**Design Workshop Facilitation**](https://app.uxcel.com/certificates/1SJBIX22ATYO)\n' +
-          '  - [**CSS for Designers**](https://app.uxcel.com/certificates/8CL9JXFROAQL)',
+          '- I keep a steady learning habit across **Interaction Design Foundation, Google UX Design, and Uxcel**.\n' +
+          '- My study areas consistently center on **human-computer interaction, usability, visual design, accessibility, information architecture, and product thinking**.\n' +
+          '- I treat courses and reading as a way to strengthen the reasoning behind my work, not just collect credentials.\n' +
+          '- When I learn something valuable, I try to turn it into clearer product decisions, better critique, and more useful teaching for other designers.',
       },
       {
         label: 'Writing',

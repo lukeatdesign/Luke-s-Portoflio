@@ -40,9 +40,8 @@ function renderSitePageMediaBlock(
 
   if (image) {
     const mediaClasses = [
-      'rich-media-band',
-      section.imagePosition === 'left' ? 'rich-media-band-reverse' : '',
-      'motion-card',
+      section.imagePosition === 'left' ? 'site-page-media-band-reverse' : '',
+      'motion-enter',
       'site-page-media-band',
       extraClassName ?? '',
     ]
@@ -55,7 +54,7 @@ function renderSitePageMediaBlock(
           <img alt={image.alt} src={image.src} />
           {image.caption ? <figcaption>{image.caption}</figcaption> : null}
         </figure>
-        <div className="rich-media-copy site-page-media-copy">
+        <div className="site-page-media-copy">
           {showTitle && 'title' in section && section.title ? <h3>{section.title}</h3> : null}
           {section.markdown ? (
             <MarkdownContent className="site-page-markdown">{section.markdown}</MarkdownContent>
@@ -66,7 +65,7 @@ function renderSitePageMediaBlock(
   }
 
   return (
-    <div className={`motion-card site-page-text-panel ${extraClassName ?? ''}`.trim()} key={key}>
+    <div className={`motion-enter site-page-text-panel ${extraClassName ?? ''}`.trim()} key={key}>
       {showTitle && 'title' in section && section.title ? <h3>{section.title}</h3> : null}
       {section.markdown ? (
         <MarkdownContent className="site-page-markdown">{section.markdown}</MarkdownContent>
@@ -137,7 +136,7 @@ function RichSitePageView({ page }: { page: RichSitePage }) {
             ) : null}
 
             {section.asideTitle || section.asideMarkdown ? (
-              <div className="site-page-panel motion-card">
+              <div className="site-page-panel motion-enter">
                 {section.asideTitle ? <p className="section-label">{section.asideTitle}</p> : null}
                 {section.asideMarkdown ? (
                   <MarkdownContent className="site-page-markdown">{section.asideMarkdown}</MarkdownContent>
@@ -168,7 +167,7 @@ function RichSitePageView({ page }: { page: RichSitePage }) {
             ) : null}
 
             {section.footerTitle || section.footerMarkdown ? (
-              <div className="site-page-panel motion-card">
+              <div className="site-page-panel motion-enter">
                 {section.footerTitle ? <p className="section-label">{section.footerTitle}</p> : null}
                 {section.footerMarkdown ? (
                   <MarkdownContent className="site-page-markdown">{section.footerMarkdown}</MarkdownContent>

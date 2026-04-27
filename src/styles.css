@@ -2060,6 +2060,10 @@ ul {
   padding-top: 4rem;
 }
 
+.rich-site-content > .case-section {
+  padding-bottom: 1.6rem;
+}
+
 .rich-site-content > .case-section + .case-section {
   padding-top: 4rem;
   border-top: 1px solid var(--line);

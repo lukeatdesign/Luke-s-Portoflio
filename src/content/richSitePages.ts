@@ -420,12 +420,6 @@ export const richSitePages: Record<string, RichSitePage> = {
       "I'm Lookchin - most people call me Luke. I studied Computer Engineering at Chulalongkorn University, moved into UX/UI design, and have spent the last eight years working across research, interface craft, systems thinking, and product delivery for technically demanding products.",
     heroNote:
       "Based in **Bangkok, Thailand**, I'm most energized by ambitious products that still need clear UX. My work has ranged from DeFi products and blockchain explorers to developer tools, and I care just as much about communication, mentorship, and writing as I do about the interface itself.",
-    heroHighlights: [
-      '8 years of experience',
-      '13+ products shipped',
-      '15 networks supported (via Celatone)',
-      'UX writing with 1000+ shares',
-    ],
     onThisPage: ['BACKGROUND', 'INTERESTS', 'COLLABORATION'],
     sections: [
       {

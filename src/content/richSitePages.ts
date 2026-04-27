@@ -418,9 +418,7 @@ export const richSitePages: Record<string, RichSitePage> = {
     heroSubtitle: 'Background, interests, and collaboration style',
     heroSummary:
       "I'm Lookchin - most people call me Luke. I studied Computer Engineering at Chulalongkorn University, moved into UX/UI design, and have spent the last eight years working across research, interface craft, systems thinking, and product delivery for technically demanding products.",
-    heroNote:
-      "Based in **Bangkok, Thailand**, I'm most energized by ambitious products that still need clear UX. My work has ranged from DeFi products and blockchain explorers to developer tools, and I care just as much about communication, mentorship, and writing as I do about the interface itself.",
-    onThisPage: ['BACKGROUND', 'INTERESTS', 'COLLABORATION'],
+    onThisPage: [],
     sections: [
       {
         label: 'BACKGROUND',

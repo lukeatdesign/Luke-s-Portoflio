@@ -2010,8 +2010,13 @@ ul {
   gap: 0 1.5rem;
 }
 
+.rich-site-page-shell .case-hero-banner {
+  align-items: center;
+}
+
 .rich-site-page-shell .case-hero-banner-content {
-  align-items: end;
+  align-items: center;
+  padding-top: 1.25rem;
 }
 
 .site-page-hero-copy {
@@ -2021,7 +2026,7 @@ ul {
 .site-page-hero-aside {
   display: grid;
   gap: 1rem;
-  align-content: end;
+  align-content: center;
 }
 
 .site-page-hero-block {

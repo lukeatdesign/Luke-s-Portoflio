@@ -2061,7 +2061,7 @@ ul {
 }
 
 .rich-site-content > .case-section + .case-section {
-  padding-top: 2.8rem;
+  padding-top: 4rem;
   border-top: 1px solid var(--line);
 }
 

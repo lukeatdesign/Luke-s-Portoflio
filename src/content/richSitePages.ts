@@ -60,6 +60,7 @@ export type RichSitePage = {
   heroSubtitle: string
   heroSummary: string
   heroNote?: string
+  heroHighlights?: string[]
   onThisPage: string[]
   sections: RichSitePageSection[]
 }
@@ -419,6 +420,12 @@ export const richSitePages: Record<string, RichSitePage> = {
       "I'm Lookchin - most people call me Luke. I studied Computer Engineering at Chulalongkorn University, moved into UX/UI design, and have spent the last eight years working across research, interface craft, systems thinking, and product delivery for technically demanding products.",
     heroNote:
       "Based in **Bangkok, Thailand**, I'm most energized by ambitious products that still need clear UX. My work has ranged from DeFi products and blockchain explorers to developer tools, and I care just as much about communication, mentorship, and writing as I do about the interface itself.",
+    heroHighlights: [
+      '8 years of experience',
+      '13+ products shipped',
+      '15 networks supported (via Celatone)',
+      'UX writing with 1000+ shares',
+    ],
     onThisPage: ['BACKGROUND', 'INTERESTS', 'COLLABORATION'],
     sections: [
       {
@@ -426,9 +433,6 @@ export const richSitePages: Record<string, RichSitePage> = {
         title: 'From engineering to product design',
         markdown:
           "My path into design started from a technical foundation. I studied **Computer Engineering at Chulalongkorn University**, and that background still shapes how I work today because it makes me comfortable learning underlying systems, talking through feasibility with engineers, and designing for products where the interaction model needs to explain something genuinely difficult. Over the last **8 years in UX/UI design**, that technical curiosity has stayed with me and become one of the reasons I gravitate toward complex products rather than avoiding them.\n\nThat foundation naturally pulled me toward products with complexity under the hood: DeFi workflows, developer tools, blockchain explorers, and products where better structure can noticeably reduce friction for the people using them. I care a lot about clarity, hierarchy, pacing, and the quality of the handoff between design and implementation because those details matter even more when the product itself is technically demanding. I was also part of the founding team behind **Celatone**, a blockchain developer tool for the Cosmos ecosystem that grew into the default explorer for multiple networks before the team was acquired by **Initia Labs**.",
-        asideTitle: 'PROFILE',
-        asideMarkdown:
-          '- Based in **Bangkok, Thailand**\n- Background in **computer engineering and product design**\n- Strongest fit in **technically demanding products**\n- Comfortable working closely with **engineers and smart contract developers**',
       },
       {
         label: 'INTERESTS',

@@ -2035,7 +2035,7 @@ ul {
   padding: 1.05rem 1.15rem;
   border: 1px solid rgba(255, 248, 251, 0.12);
   border-radius: 14px;
-  background: rgba(23, 18, 20, 0.16);
+  background: rgba(18, 12, 15, 0.46);
   box-shadow: none;
 }
 
@@ -2054,6 +2054,10 @@ ul {
 
 .site-page-hero-note a {
   color: rgba(255, 248, 251, 0.92);
+}
+
+.rich-site-content > .case-section:first-child {
+  padding-top: 4rem;
 }
 
 .rich-site-content > .case-section + .case-section {

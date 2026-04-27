@@ -102,26 +102,35 @@ function RichSitePageView({ page }: { page: RichSitePage }) {
             <p className="lead">{page.heroSummary}</p>
           </div>
 
-          <div className="site-page-hero-aside">
-            <div className="site-page-hero-block motion-card">
-              <p className="case-hero-meta-label">On this page</p>
-              <ul className="case-list">
-                {page.onThisPage.map((item) => (
-                  <li key={item}>{item}</li>
-                ))}
-              </ul>
-            </div>
-            {page.heroNote ? (
+            <div className="site-page-hero-aside">
               <div className="site-page-hero-block motion-card">
-                <p className="case-hero-meta-label">From the page</p>
-                <MarkdownContent className="site-page-markdown site-page-hero-note">
-                  {page.heroNote}
-                </MarkdownContent>
+                <p className="case-hero-meta-label">On this page</p>
+                <ul className="case-list">
+                  {page.onThisPage.map((item) => (
+                    <li key={item}>{item}</li>
+                  ))}
+                </ul>
               </div>
-            ) : null}
+              {page.heroHighlights && page.heroHighlights.length > 0 ? (
+                <div className="site-page-hero-block motion-card">
+                  <p className="case-hero-meta-label">At a glance</p>
+                  <ul className="case-list">
+                    {page.heroHighlights.map((item) => (
+                      <li key={item}>{item}</li>
+                    ))}
+                  </ul>
+                </div>
+              ) : page.heroNote ? (
+                <div className="site-page-hero-block motion-card">
+                  <p className="case-hero-meta-label">From the page</p>
+                  <MarkdownContent className="site-page-markdown site-page-hero-note">
+                    {page.heroNote}
+                  </MarkdownContent>
+                </div>
+              ) : null}
+            </div>
           </div>
-        </div>
-      </header>
+        </header>
 
       <main className="case-content rich-site-content">
         {page.sections.map((section) => (

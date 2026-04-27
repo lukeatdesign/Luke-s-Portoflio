@@ -1,4 +1,4 @@
-import designResearch from '../assets/site-pages/design/research.png'
+﻿import designResearch from '../assets/site-pages/design/research.png'
 import designStructureSkeleton from '../assets/site-pages/design/structure-skeleton.png'
 import designSurfaceLevel from '../assets/site-pages/design/surface-level.png'
 import designDesignSystem from '../assets/site-pages/design/design-system.png'
@@ -22,6 +22,9 @@ import upskillingSpeakerSlide from '../assets/site-pages/upskilling/speaker-slid
 import upskillingPanelistTopics from '../assets/site-pages/upskilling/panelist-topics.png'
 import upskillingInstructorMessages from '../assets/site-pages/upskilling/instructor-messages.png'
 import upskillingStudentReception from '../assets/site-pages/upskilling/student-reception.png'
+import aboutLukeReading from '../assets/site-pages/about-luke/picture1.png'
+import aboutLukeDream from '../assets/site-pages/about-luke/picture2.png'
+import aboutLukePersonal from '../assets/site-pages/about-luke/picture3.png'
 
 export type RichSitePageImage = {
   src: string
@@ -404,4 +407,67 @@ export const richSitePages: Record<string, RichSitePage> = {
       },
     ],
   },
+  'about-luke': {
+    slug: 'about-luke',
+    kicker: 'About',
+    title: 'About Luke',
+    heroImage: {
+      src: aboutLukePersonal,
+      alt: 'Portrait-style personal image from the About Luke page',
+    },
+    heroSubtitle: 'Background and personal sides',
+    heroSummary:
+      'Iâ€™m Lookchin â€” most people call me Luke. I studied Computer Engineering at Chulalongkorn University, moved into UX/UI design, and have spent the last eight years working across research, interface craft, systems thinking, and product delivery for technically demanding products.',
+    heroNote:
+      'Based in **Bangkok, Thailand**, Iâ€™m most energized by ambitious products that still need clear UX. Beyond product work, I care a lot about reading, teaching, writing, and the kind of communication that helps teams work with more clarity and empathy.',
+    onThisPage: ['BACKGROUND', 'READING HABIT', 'CREATIVE PATH', 'PERSONAL SIDE'],
+    sections: [
+      {
+        label: 'BACKGROUND',
+        title: 'From engineering to product design',
+        markdown:
+          'My path into design started from a technical foundation. I studied **Computer Engineering at Chulalongkorn University**, and that background still shapes how I work today. Iâ€™m comfortable learning underlying systems, talking through feasibility with engineers, and designing for products where the interaction model needs to explain something genuinely difficult.\n\nOver time, that foundation pulled me toward products with complexity under the hood: workflow systems, developer tools, analytics, and products where a better interface can noticeably reduce friction for the people using them. That is also why I care so much about clarity, hierarchy, pacing, and the quality of the handoff between design and implementation.\n\nI was also part of the founding team behind **Celatone**, a smart-contract explorer for the Cosmos ecosystem. We grew it into the default explorer for multiple networks, and the team was eventually acquired by Initia Labs. Experiences like that shaped how I think about product ambition, collaboration, and designing for real-world constraints.',
+        asideTitle: 'PROFILE',
+        asideMarkdown:
+          '- Based in **Bangkok, Thailand**\n- Background in **engineering and product design**\n- Most energized by **ambitious products that still need clear UX**',
+      },
+      {
+        label: 'READING HABIT',
+        title: 'Forcing myself into having a reading habit',
+        image: {
+          src: aboutLukeReading,
+          alt: 'Books and reading habit image from the About Luke page',
+          caption: 'Reading became one of the ways I built knowledge and perspective outside formal classrooms.',
+        },
+        imagePosition: 'left',
+        markdown:
+          'Iâ€™m not a born-to-be reader. And I found myself not having such good grades when I was a student. In despair of my own futures, I try other ways to gain knowledge outside the classrooms.\n\nFortunately, many books introduced me to both soft and hard skills and sharpened my attitudes. Over time, reading became less about self-improvement as an abstract goal and more about building a stronger way to think â€” one that helps me make better product decisions, explain ideas more clearly, and stay open to perspectives beyond my own discipline.\n\nThat habit still influences how I work. A lot of the way I think about design, communication, and leadership comes from consistently looking for ideas outside the immediate project in front of me. In case you are interested, you can see more about my reading list in **my Goodreads profile**.',
+      },
+      {
+        label: 'CREATIVE PATH',
+        title: 'I was the one who dare to dream',
+        image: {
+          src: aboutLukeDream,
+          alt: 'Sports media and creative path image from the About Luke page',
+          caption: 'Before product design fully took over, I had already been learning how to build audiences, tell stories, and create momentum around ideas.',
+        },
+        imagePosition: 'right',
+        markdown:
+          'When I was younger, I was aware that I would not make a good software engineer myself and dreamed of sports media-related jobs. I founded a Facebook page about Spanish Football (LaLiga) with more than **180,000 followers**, which led me to being offered the position of **Digital Strategy Director at Khobsanam**, one of the most well-known sports media organizations in Thailand.\n\nDuring that period, I received many opportunities to be an event MC, a football commentator, and an eSport commentator. Those experiences gave me a much stronger appreciation for pacing, audience attention, and how to communicate ideas in ways that feel alive rather than merely correct.\n\nEven though that chapter looks different from my product work on paper, it still shows up in how I design. It taught me that clarity is not dry, storytelling matters, and people engage much more deeply when information is presented with rhythm, confidence, and intent.',
+      },
+      {
+        label: 'PERSONAL SIDE',
+        title: 'Strong personalities with many soft sides',
+        image: {
+          src: aboutLukePersonal,
+          alt: 'Personal life image from the About Luke page',
+          caption: 'Outside work, I try to stay grounded in the people and routines that make the work sustainable.',
+        },
+        imagePosition: 'left',
+        markdown:
+          'I genuinely believe that strong **leadership comes with radical empathy**. I always try to improve myself to be an active listener who speaks out clear ideas. That balance matters to me: being direct enough to move things forward, while still making other people feel understood and respected.\n\nI consider myself just an ordinary person who is still far from perfection and would never be, but at least I try my best to get closer to that word every day. That mindset shapes not only how I lead and collaborate, but also how I think about learning, critique, and helping other people grow with confidence.\n\nBeyond work, I spend time reading books, playing **Street Fighter 6**, and being with my partner and our cat, **Meonji**. Those quieter parts of life matter to me because they keep the work human â€” and remind me that good design, at its best, should do the same.',
+      },
+    ],
+  },
 }
+

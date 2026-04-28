@@ -372,6 +372,31 @@ function navigateToChat() {
   window.location.hash = '/chat'
 }
 
+function scrollToContactSection() {
+  const contactSection = document.getElementById('contact')
+
+  if (contactSection) {
+    contactSection.scrollIntoView({ behavior: 'smooth', block: 'start' })
+  }
+}
+
+function handleContactNavClick(event: ReactMouseEvent<HTMLAnchorElement>) {
+  event.preventDefault()
+
+  const hash = window.location.hash
+  const isHome = !hash || hash === '#' || hash === '#/'
+
+  if (isHome) {
+    scrollToContactSection()
+    return
+  }
+
+  window.location.hash = '/'
+  window.setTimeout(() => {
+    scrollToContactSection()
+  }, 100)
+}
+
 function App() {
   const [route, setRoute] = useState<Route>(() => getRoute())
   const [imagePreview, setImagePreview] = useState<ImagePreview | null>(null)
@@ -792,7 +817,7 @@ function HomePage() {
             <div className="nav-links">
               <a href="#work">Case Studies</a>
               <a href="#strengths">What I Do</a>
-              <a href="#contact">Contact</a>
+              <a href="#/" onClick={handleContactNavClick}>Contact</a>
             </div>
           </nav>
         </div>
@@ -994,7 +1019,7 @@ function HomePage() {
         <section className="contact-section motion-section" id="contact">
           <div className="section-heading motion-enter">
             <p className="section-label">Get in touch</p>
-            <h2>Open to conversations about product design, design leadership, and thoughtful UX.</h2>
+            <h2>Still most interested in the hard problems. Looking for the team that feels the same way.</h2>
           </div>
 
           <div className="contact-grid">

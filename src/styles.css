@@ -32,10 +32,12 @@
 
 * {
   box-sizing: border-box;
+  min-width: 0;
 }
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -47,6 +49,7 @@ body {
   color: var(--ink);
   position: relative;
   overflow-x: hidden;
+  overflow-wrap: break-word;
 }
 
 body::before,
@@ -3902,6 +3905,20 @@ ul {
   .strength-grid > :first-child,
   .contact-grid > :first-child {
     border-top: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  /* BUG 1 — case study hero: collapse two-column to single column */
+  .case-hero-grid,
+  .case-hero-banner-content {
+    grid-template-columns: 1fr;
+  }
+
+  /* BUG 2 — rich site page image+text bands (About Luke etc.) */
+  .site-page-media-band,
+  .site-page-media-band-reverse {
+    grid-template-columns: 1fr;
   }
 }
 

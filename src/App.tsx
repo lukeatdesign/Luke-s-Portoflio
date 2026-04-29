@@ -1,5 +1,5 @@
 import type { CSSProperties, ComponentType, MouseEvent as ReactMouseEvent, ReactNode, SVGProps } from 'react'
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import ReactMarkdown from 'react-markdown'
 import {
   AcademicCapIcon,
@@ -40,6 +40,22 @@ type ImagePreview = {
   alt: string
   caption?: string
 }
+
+const BRAND_TEXT = 'LUKE'
+const brandLogoAnimations = [
+  'logo-wave',
+  'logo-glitch',
+  'logo-spin',
+  'logo-jello',
+  'logo-scatter',
+  'logo-typewriter',
+  'logo-colorflash',
+  'logo-tilt',
+  'logo-shake',
+  'logo-scramble',
+] as const
+
+type BrandLogoAnimation = (typeof brandLogoAnimations)[number]
 
 const strengths = [
   {
@@ -397,6 +413,93 @@ function handleContactNavClick(event: ReactMouseEvent<HTMLAnchorElement>) {
   }, 100)
 }
 
+function BrandLogo() {
+  const [animationClass, setAnimationClass] = useState<BrandLogoAnimation | ''>('')
+  const [displayLetters, setDisplayLetters] = useState(() => BRAND_TEXT.split(''))
+  const resetTimeoutRef = useRef<number | null>(null)
+  const scrambleTimeoutsRef = useRef<number[]>([])
+
+  const clearScheduledAnimation = () => {
+    if (resetTimeoutRef.current !== null) {
+      window.clearTimeout(resetTimeoutRef.current)
+      resetTimeoutRef.current = null
+    }
+
+    scrambleTimeoutsRef.current.forEach((timeoutId) => window.clearTimeout(timeoutId))
+    scrambleTimeoutsRef.current = []
+  }
+
+  const resetBrandAnimation = () => {
+    clearScheduledAnimation()
+    setAnimationClass('')
+    setDisplayLetters(BRAND_TEXT.split(''))
+  }
+
+  useEffect(() => () => clearScheduledAnimation(), [])
+
+  const startScrambleAnimation = () => {
+    const randomUppercaseLetter = () => String.fromCharCode(65 + Math.floor(Math.random() * 26))
+    const letters = BRAND_TEXT.split('')
+
+    letters.forEach((letter, index) => {
+      const scrambleIn = window.setTimeout(() => {
+        setDisplayLetters((current) => {
+          const next = [...current]
+          next[index] = randomUppercaseLetter()
+          return next
+        })
+      }, index * 80)
+
+      const scrambleOut = window.setTimeout(() => {
+        setDisplayLetters((current) => {
+          const next = [...current]
+          next[index] = letter
+          return next
+        })
+      }, index * 80 + 140)
+
+      scrambleTimeoutsRef.current.push(scrambleIn, scrambleOut)
+    })
+  }
+
+  const handleMouseEnter = () => {
+    clearScheduledAnimation()
+
+    const nextAnimation =
+      brandLogoAnimations[Math.floor(Math.random() * brandLogoAnimations.length)] ?? 'logo-wave'
+
+    setDisplayLetters(BRAND_TEXT.split(''))
+    setAnimationClass(nextAnimation)
+
+    if (nextAnimation === 'logo-scramble') {
+      startScrambleAnimation()
+    }
+
+    resetTimeoutRef.current = window.setTimeout(() => {
+      resetBrandAnimation()
+    }, 580)
+  }
+
+  return (
+    <a
+      aria-label="Luke home"
+      className={`brand${animationClass ? ` ${animationClass}` : ''}`}
+      href="#/"
+      onMouseEnter={handleMouseEnter}
+    >
+      {displayLetters.map((letter, index) => (
+        <span
+          className="brand-letter"
+          key={`${letter}-${index}`}
+          style={{ '--logo-index': index } as CSSProperties}
+        >
+          {letter}
+        </span>
+      ))}
+    </a>
+  )
+}
+
 function App() {
   const [route, setRoute] = useState<Route>(() => getRoute())
   const [imagePreview, setImagePreview] = useState<ImagePreview | null>(null)
@@ -633,9 +736,7 @@ function RichSitePageView({ page }: { page: RichSitePage }) {
           style={{ backgroundImage: `url(${page.heroImage.src})` }}
         />
         <nav className="topbar motion-enter motion-delay-1">
-          <a className="brand" href="#/">
-            Luke
-          </a>
+          <BrandLogo />
           <div className="nav-links">
             <a href="#/">Home</a>
             <button className="nav-link-button" onClick={navigateToWhatIDo} type="button">
@@ -811,9 +912,7 @@ function HomePage() {
       <header className="hero motion-section" id="top">
         <div className="hero-inner">
           <nav className="topbar motion-enter motion-delay-1">
-            <a className="brand" href="#/">
-              Luke
-            </a>
+            <BrandLogo />
             <div className="nav-links">
               <a href="#work">Case Studies</a>
               <a href="#strengths">What I Do</a>
@@ -842,7 +941,11 @@ function HomePage() {
                 real constraints and real users are both pulling at once.
               </blockquote>
               <div className="hero-actions">
-                <button className="button button-primary" onClick={navigateToChat}>
+                <button
+                  className="button button-primary"
+                  onClick={navigateToChat}
+                  style={{ display: 'none' }}
+                >
                   Chat with Luka
                 </button>
                 <a className="button button-secondary" href="#work">
@@ -1101,9 +1204,7 @@ function CaseStudyPage({ slug }: { slug: string }) {
     <div className="page-shell case-page-shell">
       <header className="case-hero motion-section">
         <nav className="topbar motion-enter motion-delay-1">
-          <a className="brand" href="#/">
-            Luke
-          </a>
+          <BrandLogo />
           <div className="nav-links">
             <a href="#/">Home</a>
             <button className="nav-link-button" onClick={navigateToWhatIDo} type="button">
@@ -1254,9 +1355,7 @@ function CelatoneCaseStudyPage({ study }: { slug?: string; study: (typeof caseSt
           style={{ backgroundImage: `url(${celatoneCaseStudy.heroImage.src})` }}
         />
         <nav className="topbar motion-enter motion-delay-1">
-          <a className="brand" href="#/">
-            Luke
-          </a>
+          <BrandLogo />
           <div className="nav-links">
             <a href="#/">Home</a>
             <button className="nav-link-button" onClick={navigateToWhatIDo} type="button">
@@ -1709,9 +1808,7 @@ export function SitePageView({ slug }: { slug: string }) {
     <div className="page-shell case-page-shell">
       <header className="case-hero motion-section">
         <nav className="topbar motion-enter motion-delay-1">
-          <a className="brand" href="#/">
-            Luke
-          </a>
+          <BrandLogo />
           <div className="nav-links">
             <a href="#/">Home</a>
             <button className="nav-link-button" onClick={navigateToWhatIDo} type="button">
@@ -1785,9 +1882,7 @@ function InitiaScanCaseStudyPage({ study }: { study: (typeof caseStudies)[number
           style={{ backgroundImage: `url(${initiascanCaseStudy.heroImage.src})` }}
         />
         <nav className="topbar motion-enter motion-delay-1">
-          <a className="brand" href="#/">
-            Luke
-          </a>
+          <BrandLogo />
           <div className="nav-links">
             <a href="#/">Home</a>
             <button className="nav-link-button" onClick={navigateToWhatIDo} type="button">
@@ -2133,9 +2228,7 @@ function RichCaseStudyPage({
           style={{ backgroundImage: `url(${richData.heroImage.src})` }}
         />
         <nav className="topbar motion-enter motion-delay-1">
-          <a className="brand" href="#/">
-            Luke
-          </a>
+          <BrandLogo />
           <div className="nav-links">
             <a href="#/">Home</a>
             <button className="nav-link-button" onClick={navigateToWhatIDo} type="button">

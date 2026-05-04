@@ -1010,11 +1010,27 @@ function HomePage() {
             <h2>My work spans craft, systems, and helping teams do better design together.</h2>
           </div>
 
-          <div className="strength-grid">
+          <div className="strength-grid strength-grid-desktop">
             {strengths.map((strength) => (
               <a className="strength-card motion-card" href={strength.href} key={strength.title}>
                 <strength.icon className="inline-icon section-icon" />
                 <h3>{strength.title}</h3>
+                <p>{strength.description}</p>
+                <span className="card-link-row">
+                  Explore
+                  <ChevronRightIcon className="inline-icon chevron-icon" />
+                </span>
+              </a>
+            ))}
+          </div>
+
+          <div className="strength-stack-mobile">
+            {strengths.map((strength) => (
+              <a className="strength-card-mobile motion-card" href={strength.href} key={`${strength.title}-mobile`}>
+                <div className="strength-card-mobile-head">
+                  <strength.icon className="inline-icon section-icon" />
+                  <h3>{strength.title}</h3>
+                </div>
                 <p>{strength.description}</p>
                 <span className="card-link-row">
                   Explore

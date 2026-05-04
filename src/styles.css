@@ -4431,6 +4431,16 @@ ul {
       'summary';
   }
 
+  .initiascan-case-page .initiascan-friendly-band {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .initiascan-case-page .initiascan-friendly-band .case-figure-band,
+  .initiascan-case-page .initiascan-friendly-band .rich-media-copy {
+    order: initial;
+  }
+
   .initiascan-case-page .initiascan-role-panel .case-list,
   .initiascan-case-page .initiascan-challenge-grid,
   .initiascan-case-page .initiascan-usability-grid,

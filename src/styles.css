@@ -4066,6 +4066,25 @@ ul {
     grid-template-columns: 1fr;
   }
 
+  .strength-card {
+    min-height: 23rem;
+    grid-template-rows: auto auto minmax(0, 1fr) auto;
+    gap: 0.95rem;
+  }
+
+  .strength-card h3 {
+    max-width: 12ch;
+  }
+
+  .strength-card p {
+    max-width: 24ch;
+  }
+
+  .strength-card .card-link-row {
+    margin-top: auto;
+    padding-top: 0.5rem;
+  }
+
   .topbar {
     display: grid;
     gap: 0.8rem;

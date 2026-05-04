@@ -3939,6 +3939,14 @@ ul {
     grid-template-columns: 1fr;
   }
 
+  .rich-overview-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .rich-overview-grid-single {
+    grid-template-columns: 1fr;
+  }
+
   /* image stacks below text on site page media bands */
   .site-page-media-band .site-page-figure {
     order: 2;

@@ -3909,16 +3909,43 @@ ul {
 }
 
 @media (max-width: 768px) {
-  /* BUG 1 — case study hero: collapse two-column to single column */
+  /* case study hero: collapse two-column to single column */
   .case-hero-grid,
   .case-hero-banner-content {
     grid-template-columns: 1fr;
   }
 
-  /* BUG 2 — rich site page image+text bands (About Luke etc.) */
+  /* clip hero content bleeding off right edge */
+  .case-hero {
+    overflow: hidden;
+  }
+
+  /* metadata grid (CATEGORY, DATE, ROLE, COMPANY) — clip + breathing room */
+  .case-hero-banner-meta {
+    overflow: hidden;
+    padding: 0 16px;
+  }
+
+  /* About Luke hero: hide right column (ON THIS PAGE nav) */
+  .site-page-hero-aside {
+    display: none;
+  }
+
+  /* rich page two-column sections — collapse to single column */
+  .rich-two-column,
+  .rich-media-band,
   .site-page-media-band,
   .site-page-media-band-reverse {
     grid-template-columns: 1fr;
+  }
+
+  /* image stacks below text on site page media bands */
+  .site-page-media-band .site-page-figure {
+    order: 2;
+  }
+
+  .site-page-media-band .site-page-media-copy {
+    order: 1;
   }
 }
 

@@ -1,0 +1,31 @@
+:root {
+  font-family: 'Hauora Sans', sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #171214;
+  background:
+    radial-gradient(circle at top left, rgba(255, 205, 217, 0.72), transparent 26%),
+    linear-gradient(180deg, #fffdfd 0%, #fff8fa 52%, #fffdfd 100%);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  --page-bg: #fffdfd;
+  --page-bg-soft: #fff8fa;
+  --ink: #171214;
+  --ink-soft: #2a2226;
+  --muted: rgba(23, 18, 20, 0.68);
+  --line: rgba(23, 18, 20, 0.1);
+  --panel: rgba(255, 255, 255, 0.88);
+  --panel-strong: rgba(255, 248, 250, 0.96);
+  --pink-500: #ef9fb5;
+  --pink-400: #f4b7c8;
+  --pink-300: #f8d3de;
+  --pink-200: #fdeaf0;
+  --pink-700: #b76582;
+  --shadow: 0 24px 80px rgba(89, 58, 70, 0.1);
+  --radius-panel: 12px;
+  --radius-tight: 8px;
+  --ease-broadcast: cubic-bezier(0.2, 0.9, 0.2, 1);
+  --ease-section-reveal: cubic-bezier(0.22, 1, 0.36, 1);
+}

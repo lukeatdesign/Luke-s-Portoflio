@@ -4062,6 +4062,10 @@ ul {
     width: min(100% - 1.25rem, 1240px);
   }
 
+  .strength-grid {
+    grid-template-columns: 1fr;
+  }
+
   .topbar {
     display: grid;
     gap: 0.8rem;

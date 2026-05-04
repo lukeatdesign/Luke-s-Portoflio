@@ -2214,9 +2214,10 @@ function RichCaseStudyPage({
   const currentIndex = caseStudies.findIndex((item) => item.slug === study.slug)
   const previousStudy = caseStudies[(currentIndex - 1 + caseStudies.length) % caseStudies.length]
   const nextStudy = caseStudies[(currentIndex + 1) % caseStudies.length]
+  const pageClassName = `rich-case-page rich-case-page--${study.slug}`
 
   return (
-    <div className="page-shell case-page-shell">
+    <div className={`page-shell case-page-shell ${pageClassName}`}>
       <header
         className={`case-hero case-hero-banner motion-section${
           richData.heroTone === 'bright' ? ' case-hero-banner--bright' : ''

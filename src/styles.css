@@ -4056,6 +4056,7 @@ ul {
 }
 
 .initiascan-case-page .rich-overview-grid {
+  grid-template-columns: minmax(0, 1.05fr) minmax(22rem, 0.95fr);
   grid-template-areas:
     'main side'
     'role role'
@@ -4421,6 +4422,15 @@ ul {
 }
 
 @media (max-width: 920px) {
+  .initiascan-case-page .rich-overview-grid {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      'main'
+      'side'
+      'role'
+      'summary';
+  }
+
   .initiascan-case-page .initiascan-role-panel .case-list,
   .initiascan-case-page .initiascan-challenge-grid,
   .initiascan-case-page .initiascan-usability-grid,

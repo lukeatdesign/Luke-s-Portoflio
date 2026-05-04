@@ -1954,7 +1954,7 @@ function InitiaScanCaseStudyPage({ study }: { study: (typeof caseStudies)[number
 
       <main className="case-content rich-case-content">
         <section className="case-section case-section-overview motion-section">
-          <div className="rich-overview-grid rich-overview-grid-single motion-enter">
+          <div className="rich-overview-grid motion-enter">
             <div className="rich-overview-main">
               <div className="section-heading">
                 <p className="section-label">Background</p>

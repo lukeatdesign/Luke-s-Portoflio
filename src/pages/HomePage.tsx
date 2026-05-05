@@ -176,9 +176,9 @@ export function HomePage() {
         <section className="work-section motion-section" id="work">
           <div className="section-heading motion-enter">
             <p className="section-label">Case Studies</p>
-            <h2>Ten projects. Each one designed end to end.</h2>
+            <h2>Selected case studies from 20+ products designed end to end.</h2>
             <p className="section-note">
-              Developer tools, DeFi, analytics, payments — shipped with real teams under real constraints.
+              Developer tools, DeFi, analytics, payments — selected work shaped with real teams under real constraints.
             </p>
           </div>
 

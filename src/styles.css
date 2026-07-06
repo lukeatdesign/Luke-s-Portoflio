@@ -1,4 +1,11 @@
 @import './styles/variables.css';
 @import './styles/layout.css';
 @import './styles/components.css';
-@import './styles/pages.css';
+@import './styles/home.css';
+@import './styles/case-study.css';
+@import './styles/site-pages.css';
+@import './styles/what-i-do.css';
+@import './styles/rich-case-study.css';
+@import './styles/responsive.css';
+@import './styles/initiascan.css';
+@import './styles/chatbot.css';

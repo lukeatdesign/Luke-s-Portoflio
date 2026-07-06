@@ -1,0 +1,263 @@
+/* Rich site pages — About Luke and other narrative pages */
+
+.rich-site-page-shell .case-hero-banner {
+  align-items: center;
+}
+
+.rich-site-page-shell .case-hero-banner-content {
+  align-items: center;
+  padding-top: 1.25rem;
+}
+
+.site-page-hero-copy {
+  max-width: 44rem;
+}
+
+.site-page-hero-aside {
+  display: grid;
+  gap: 1rem;
+  align-content: center;
+}
+
+.site-page-hero-block {
+  display: grid;
+  gap: 0.8rem;
+  padding: 1.05rem 1.15rem;
+  border: 1px solid rgba(255, 248, 251, 0.12);
+  border-radius: 14px;
+  background: rgba(18, 12, 15, 0.46);
+  box-shadow: none;
+}
+
+.site-page-hero-block .case-list {
+  margin: 0;
+  color: rgba(255, 248, 251, 0.84);
+}
+
+.site-page-hero-note {
+  color: rgba(255, 248, 251, 0.84);
+}
+
+.site-page-hero-note p {
+  margin: 0;
+}
+
+.site-page-hero-note a {
+  color: rgba(255, 248, 251, 0.92);
+}
+
+.rich-site-content > .case-section:first-child {
+  padding-top: 4rem;
+}
+
+.rich-site-content > .case-section {
+  padding-bottom: 1.6rem;
+}
+
+.rich-site-content > .case-section + .case-section {
+  padding-top: 4rem;
+  border-top: 1px solid var(--line);
+}
+
+.site-page-media-band {
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(280px, 0.72fr);
+  gap: clamp(1.45rem, 3vw, 2.35rem);
+  align-items: center;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.site-page-lead-band {
+  align-items: start;
+}
+
+.site-page-media-band-reverse {
+  grid-template-columns: minmax(280px, 0.72fr) minmax(0, 1.08fr);
+}
+
+.site-page-media-band-reverse .site-page-figure {
+  order: 2;
+}
+
+.site-page-media-band-reverse .site-page-media-copy {
+  order: 1;
+}
+
+.site-page-stack {
+  display: grid;
+  gap: clamp(1.65rem, 3vw, 2.4rem);
+}
+
+.site-page-split {
+  gap: clamp(1.45rem, 3vw, 2.35rem);
+  align-items: start;
+}
+
+.site-page-split-aside {
+  margin-top: 0;
+}
+
+.site-page-figure {
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.site-page-figure img {
+  height: auto;
+  max-height: none;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: 0 0 0.9rem 0.2rem rgba(244, 183, 200, 0.18);
+}
+
+.site-page-media-copy {
+  display: grid;
+  gap: 0.95rem;
+  padding: 0;
+}
+
+.site-page-media-copy h3,
+.site-page-text-panel h3 {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: clamp(1.2rem, 2.1vw, 1.45rem);
+  font-weight: 600;
+  line-height: 1.14;
+  letter-spacing: -0.03em;
+}
+
+.site-page-text-panel,
+.site-page-panel {
+  display: grid;
+  gap: 0.8rem;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.site-page-panel {
+  margin-top: 0;
+}
+
+.site-page-markdown {
+  display: grid;
+  gap: 0.85rem;
+  color: var(--ink-soft);
+  font-size: 1rem;
+  line-height: 1.72;
+}
+
+.site-page-markdown > * {
+  margin: 0;
+}
+
+.site-page-markdown h2,
+.site-page-markdown h3 {
+  color: var(--ink-soft);
+  font-size: 1.08rem;
+  line-height: 1.28;
+  letter-spacing: -0.02em;
+}
+
+.site-page-markdown p + p,
+.site-page-markdown p + ul,
+.site-page-markdown p + ol,
+.site-page-markdown ul + p,
+.site-page-markdown ol + p,
+.site-page-markdown h2 + p,
+.site-page-markdown h3 + p {
+  margin-top: 0.95rem;
+}
+
+.site-page-markdown ul,
+.site-page-markdown ol {
+  padding-left: 1.2rem;
+}
+
+.site-page-markdown ul ul,
+.site-page-markdown ol ol,
+.site-page-markdown ul ol,
+.site-page-markdown ol ul {
+  margin-top: 0.6rem;
+}
+
+.site-page-markdown li + li {
+  margin-top: 0.55rem;
+}
+
+.site-page-markdown strong {
+  color: var(--ink);
+}
+
+.site-page-markdown blockquote {
+  margin: 0;
+  padding: 1rem 1.1rem;
+  border-left: 3px solid var(--pink-500);
+  background: rgba(255, 248, 250, 0.72);
+  color: var(--ink-soft);
+}
+
+.site-page-markdown a {
+  color: var(--pink-700);
+  text-decoration: underline;
+  text-decoration-color: rgba(183, 101, 130, 0.38);
+  text-underline-offset: 0.18em;
+}
+
+.site-page-gallery {
+  padding: 0.4rem 0.15rem 0.9rem;
+}
+
+.site-page-gallery .case-figure {
+  background: transparent;
+  box-shadow: none;
+}
+
+.site-page-gallery .case-figure img {
+  box-shadow: 0 0 0.9rem 0.18rem rgba(244, 183, 200, 0.18);
+}
+
+.rich-site-content .site-page-media-band,
+.rich-site-content .site-page-text-panel,
+.rich-site-content .site-page-panel {
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.rich-site-content .site-page-figure.case-figure,
+.rich-site-content .site-page-figure.case-figure-band,
+.rich-site-content .site-page-figure.case-figure-full {
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.rich-site-content .site-page-figure.case-figure img,
+.rich-site-content .site-page-figure.case-figure-band img,
+.rich-site-content .site-page-figure.case-figure-full img {
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.rich-site-content .site-page-figure figcaption {
+  width: 100%;
+  max-width: none;
+  color: rgba(23, 18, 20, 0.6);
+  font-size: 0.93rem;
+}
+

@@ -55,21 +55,30 @@
   }
 
   .case-section-pain .rich-pain-point {
+    grid-template-columns: 1fr;
     gap: 1rem;
     padding: 1.5rem 0 1.7rem;
     align-items: start;
   }
 
   .case-section-improvement .rich-improvement-point {
+    grid-template-columns: 1fr;
     gap: 1rem;
     padding: 1.5rem 0 1.7rem;
     align-items: start;
   }
 
   .case-section-solutions .rich-solution-point {
+    grid-template-columns: 1fr;
     gap: 1rem;
     padding: 1.5rem 0 1.7rem;
     align-items: start;
+  }
+
+  /* Solution rows lead with the figure on desktop; on mobile keep copy-first
+     so all stacked rows read the same way */
+  .case-section-solutions .rich-solution-point .rich-solution-copy {
+    order: -1;
   }
 
   .case-section-pain .rich-pain-copy {

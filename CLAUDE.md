@@ -49,7 +49,7 @@ When asking a clarifying question:
 This is **Luke's UX/UI design portfolio** — a personal portfolio site for a senior UX/UI designer and researcher with ~8 years of experience and a Computer Engineering background. The site showcases 12 case studies and includes an AI-powered "Hire Luka" chatbot (currently hidden, planned for future implementation).
 
 **Owner:** Luke (also goes by Luka) — UX/UI Designer based in Bangkok. Signs professional work as "Luke."  
-**Stack:** React 19 + TypeScript + Vite, plain CSS (`src/styles.css`), hash-based routing, frontend-only SPA.  
+**Stack:** React 19 + TypeScript + Vite, plain CSS (modular files under `src/styles/`), hash-based routing, frontend-only SPA.  
 **Deployment:** Vercel — auto-deploys on push to `master`.  
 **Live site:** https://luke-portfolio-sepia.vercel.app
 
@@ -93,14 +93,22 @@ There are no test or lint scripts configured.
 
 ## Architecture
 
-### App.tsx — monolith, do not refactor
-`src/App.tsx` is ~2400 lines and contains all components, routing, and layout in one file. This is intentional for now. **Do NOT refactor or split it unless explicitly asked.**
+### App structure
+`src/App.tsx` (~130 lines) handles routing and layout only. Page components live in `src/pages/`, shared components in `src/components/`, routing helpers in `src/utils/router.ts`.
+
+### Styles — modular CSS
+`src/styles.css` is the entry point; it only `@import`s the modules in `src/styles/`. Import order matters (CSS cascade):
+`variables → layout → components → home → case-study → site-pages → what-i-do → rich-case-study → responsive → initiascan → chatbot`
+
+- Each page/feature owns one module (e.g. `home.css`, `case-study.css`, `chatbot.css`).
+- `responsive.css` holds the **cross-page** breakpoint blocks (920/768/720) plus reduced-motion; it must stay imported after the base page modules. InitiaScan and the chatbot keep their own media queries inside their modules.
+- When adding styles for a single page, put them in that page's module. Only touch `responsive.css` for rules spanning multiple pages.
 
 ### Routing
-The app uses **hash-based client-side routing** with no router library. `App.tsx` reads `window.location.hash`, parses it into a `Route` discriminated union (`home | case-study | page | chat`), and listens for `hashchange` events. Navigation helpers (`navigateToCaseStudy`, `navigateToPage`, `navigateHome`, `navigateToChat`) just set `window.location.hash`. URL patterns:
+The app uses **hash-based client-side routing** with no router library. `src/utils/router.ts` reads `window.location.hash` and parses it into a `Route` discriminated union (`home | case-study | page | chat`); `App.tsx` listens for `hashchange` events. Navigation helpers (`navigateToCaseStudy`, `navigateToPage`, `navigateToWhatIDo`, `navigateHome`, `navigateToChat`) just set `window.location.hash`. URL patterns:
 - `#/` → `HomePage`
 - `#/case-studies/:slug` → `CaseStudyPage`
-- `#/pages/:slug` → `SitePageView`
+- `#/what-i-do/:slug` or `#/pages/:slug` → site page view (`#/what-i-do` alone redirects home)
 - `#/chat` → `ChatbotFlow` (returns early, bypasses the `app-root` wrapper)
 
 ### Case study rendering — three tiers

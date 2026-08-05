@@ -47,6 +47,7 @@ export const showupCaseStudy: RichCaseStudy = {
   ],
   background:
     'ShowUp is a personal fitness accountability web app with a single user: me. Yuna, an AI companion, lives persistently in the interface - she chats, turns natural language into structured workout rows, builds session plans around how I actually feel, and calls the week like a commentator reading a match. The whole product is styled like a sports broadcast, because a scoreboard treats your training like it matters. It is live, deployed, and running my real training weeks - the screenshots on this page are my actual data.',
+  projectLinks: [{ label: 'Live Demo', href: 'https://showup-black-delta.vercel.app/' }],
   motivation: [
     'It is 8PM in Bangkok. Work is done, dinner is settling, and there is a very specific ten-second window where tonight goes one of two ways: I pick up the gloves, or I drift into a screen and the night quietly disappears. Every fitness app I tried lived on the wrong side of that window - brilliant at recording what happened, silent while it was being decided.',
     'I had a second motive, too. As a designer I kept circling one question: what does it actually mean to design an AI personality as product material - not a mascot, not a gimmick, but a load-bearing part of the UX? The most honest way to find out was to build a companion I would have to live with. One user, every night, zero tolerance for a wrong note in her voice.',

@@ -137,12 +137,12 @@ export const showupCaseStudy: RichCaseStudy = {
         '“You owe Yuna. 20 push-ups. Settle this before we start. (눈_눈)” - guilt engineered into a payable form.',
     },
     {
-      title: 'Ann Mode: the app goes quiet before it goes soft',
+      title: 'Tough-love mode: the app goes quiet before it goes soft',
       body:
         'Miss several days and ShowUp stops being colorful. The dashboard is replaced by a near-black screen: the old streak crossed out, and Yuna at her most fierce - “I’m not counting anymore. Come back when you’re ready to actually show up. No debt. No tax. Just show up.” One yellow bar at the bottom: I’M BACK. LET’S GO. It is the hardest emotional tuning in the product - enough pull to get me through the door, never enough shame to make me delete the app.',
       image: img('ann-mode.png'),
       caption:
-        'Ann Mode after three missed days. No stats, no cheer - one honest sentence and one way back.',
+        'Tough-love mode after three missed days. No stats, no cheer - one honest sentence and one way back.',
     },
     {
       title: 'Planning starts from tonight’s reality, not a template',
@@ -170,7 +170,7 @@ export const showupCaseStudy: RichCaseStudy = {
     {
       emphasis: 'Yuna’s personality became product infrastructure.',
       body:
-        'Her persona doc, voice rules, and intent guardrails drive every response across seven screen contexts - short mid-set, loud after PRs, quiet-fierce in Ann Mode. Designing when she does nothing turned out to be the core UX work, and it is what keeps the chat trustworthy enough to be the primary input.',
+        'Her persona doc, voice rules, and intent guardrails drive every response across seven screen contexts - short mid-set, loud after PRs, quiet-fierce when days go missing. Designing when she does nothing turned out to be the core UX work, and it is what keeps the chat trustworthy enough to be the primary input.',
     },
     {
       emphasis: 'It proved a design-docs-first way of building with AI agents.',
@@ -192,7 +192,7 @@ export const showupCaseStudy: RichCaseStudy = {
     {
       title: 'Motivation design is emotional tuning, not feature shipping',
       body:
-        'Streaks, debts, verdicts, and Ann Mode are one system with a single dial: how hard can Yuna push before pull becomes shame? That dial got tuned by living with it - the version of Ann Mode that shipped is quieter and shorter than the one I designed first, because the loud one made me avoid the app instead of the gym.',
+        'Streaks, debts, verdicts, and tough-love mode are one system with a single dial: how hard can Yuna push before pull becomes shame? That dial got tuned by living with it - the tough-love mode that shipped is quieter and shorter than the one I designed first, because the loud one made me avoid the app instead of the gym.',
     },
     {
       title: 'Designing for one user removes compromise, not rigor',

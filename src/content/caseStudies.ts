@@ -236,7 +236,7 @@ export const caseStudies: CaseStudy[] = [
     approachPoints: [
       'Wrote Yuna’s persona and voice rules as design documents before most screens existed.',
       'Classified every message by intent with a lean-casual golden rule, so logging only fires on clear signals.',
-      'Turned missed days into a debt system with Ann Mode - accountability with personality instead of guilt notifications.',
+      'Turned missed days into a debt system with a tough-love mode - accountability with personality instead of guilt notifications.',
     ],
     outcomeTitle: 'A live product that runs my real training weeks',
     outcomePoints: [

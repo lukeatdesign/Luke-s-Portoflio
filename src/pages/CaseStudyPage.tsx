@@ -1,4 +1,5 @@
 import { BrandLogo } from "../components/BrandLogo";
+import { ShowUpDemo } from "../components/ShowUpDemo";
 import { caseStudies } from "../content/caseStudies";
 import { richCaseStudies } from "../content/richCaseStudies";
 import { navigateToWhatIDo, navigateToCaseStudy } from "../utils/router";
@@ -23,7 +24,13 @@ export function CaseStudyPage({ slug }: { slug: string }) {
 
     const richData = richCaseStudies[slug];
     if (richData) {
-    return <RichCaseStudyPage richData={richData} study={study} />
+    return (
+      <RichCaseStudyPage
+        demoSlot={slug === 'showup' ? <ShowUpDemo /> : undefined}
+        richData={richData}
+        study={study}
+      />
+    )
     }
 
     const currentIndex = caseStudies.findIndex((item) => item.slug === slug);

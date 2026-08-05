@@ -9,6 +9,7 @@ import { markrCaseStudy } from './markrCaseStudy'
 import { ladderCaseStudy } from './ladderCaseStudy'
 import { wayfarerCaseStudy } from './wayfarerCaseStudy'
 import { incidentManagementCaseStudy } from './incidentManagementCaseStudy'
+import { showupCaseStudy } from './showupCaseStudy'
 
 export const richCaseStudies: Record<string, RichCaseStudy> = {
   'alpha-homora-v2': alphahomorav2CaseStudy,
@@ -21,4 +22,5 @@ export const richCaseStudies: Record<string, RichCaseStudy> = {
   ladder: ladderCaseStudy,
   wayfarer: wayfarerCaseStudy,
   'incident-management': incidentManagementCaseStudy,
+  showup: showupCaseStudy,
 }

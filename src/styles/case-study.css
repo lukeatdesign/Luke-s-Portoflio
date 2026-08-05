@@ -458,6 +458,56 @@
   max-width: 27rem;
 }
 
+/* ── ShowUp overrides ──
+   Pain points carry no figures on this page, so instead of leaving the figure
+   column empty they sit side by side as a three-column editorial row. */
+.rich-case-page--showup .case-section-pain .rich-feature-stack {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0 2.2rem;
+}
+
+.rich-case-page--showup .case-section-pain .rich-pain-point,
+.rich-case-page--showup .case-section-pain .rich-pain-point:first-child {
+  grid-template-columns: 1fr;
+  align-content: start;
+  padding: 0.4rem 0 1rem;
+  border-top: 0;
+}
+
+.rich-case-page--showup .case-section-pain .rich-pain-copy {
+  max-width: none;
+  align-content: start;
+}
+
+@media (max-width: 960px) {
+  .rich-case-page--showup .case-section-pain .rich-feature-stack {
+    grid-template-columns: 1fr;
+  }
+
+  .rich-case-page--showup .case-section-pain .rich-pain-point {
+    border-top: 1px solid var(--line);
+    padding: 1.6rem 0;
+  }
+
+  .rich-case-page--showup .case-section-pain .rich-pain-point:first-child {
+    border-top: 0;
+    padding-top: 0.4rem;
+  }
+}
+
+/* ShowUp screenshots mix landscape boards and portrait phone/plan shots —
+   never force-crop them into a fixed band ratio. */
+.rich-case-page--showup .case-figure-band img,
+.rich-case-page--showup .rich-media-band-vertical .case-figure-band img {
+  aspect-ratio: auto;
+  object-fit: contain;
+  max-height: 30rem;
+}
+
+.rich-case-page--showup .case-section-solutions .rich-solution-figure img {
+  max-height: 32rem;
+}
+
 .case-hero-meta-block {
   display: grid;
   gap: 0.25rem;

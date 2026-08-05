@@ -9,6 +9,7 @@ import alphaThumbnail from '../assets/case_studies_thumbnails/alphahomorav2.png'
 import markrThumbnail from '../assets/case_studies_thumbnails/markr.png'
 import ladderThumbnail from '../assets/case_studies_thumbnails/ladder.png'
 import incidentManagementThumbnail from '../assets/incident-management/image.png'
+import showupThumbnail from '../assets/showup/live-board-overview.png'
 
 export type CaseStudy = {
   slug: string
@@ -204,6 +205,49 @@ export const caseStudies: CaseStudy[] = [
     learningPoints: [
       'Working product behavior can communicate design intent more fully than static screens alone.',
       'Learning through building made the design process more concrete and more complete.',
+    ],
+  },
+{
+    slug: 'showup',
+    thumbnail: showupThumbnail,
+    title: 'ShowUp',
+    kicker: 'AI Fitness Companion',
+    meta: 'Personal Product - 2026',
+    duration: 'Ongoing - designed, built, and deployed as a living product.',
+    role: 'Solo Designer & Builder directing AI agents from design docs to a deployed product.',
+    summary:
+      'A single-user fitness accountability app with Yuna, an AI companion who logs workouts through natural chat, plans sessions, and collects on missed days - designed like a sports broadcast, built for exactly one athlete.',
+    tags: ['Desktop', 'Mobile', 'AI Companion', 'Personal Product'],
+    highlights: [
+      'Live in daily use - the case study shows a real 63-day streak.',
+      'Yuna’s persona and voice rules were designed before her screens.',
+      'Includes a playable in-page prototype of the core loop and intent guardrail.',
+    ],
+    contextTitle: 'A scoreboard for one athlete instead of another tracker',
+    contextSummary:
+      'ShowUp exists for the moment before the workout, not the record after it. One clean loop - show up, log or plan, the board updates, Yuna responds in context - styled like a sports broadcast so training feels like it matters.',
+    challengeTitle: 'The hard problems were motivation and trust, not features',
+    challengePoints: [
+      'Trackers put all their design into logging and none into the decision to train.',
+      'Natural-language logging breaks trust the moment the AI writes wrong data.',
+      'Missed days are usually met with silence or shame, and neither gets you back in the gym.',
+    ],
+    approachTitle: 'I designed the personality first and the guardrails with it',
+    approachPoints: [
+      'Wrote Yuna’s persona and voice rules as design documents before most screens existed.',
+      'Classified every message by intent with a lean-casual golden rule, so logging only fires on clear signals.',
+      'Turned missed days into a debt system with Ann Mode - accountability with personality instead of guilt notifications.',
+    ],
+    outcomeTitle: 'A live product that runs my real training weeks',
+    outcomePoints: [
+      'Deployed and in daily use with imported training history, real streaks, debts, and PRs.',
+      'Yuna’s personality became infrastructure - persona docs and guardrails drive every response in every screen context.',
+      'The build proved a design-docs-first workflow where AI agents are the build team and the designer stays full-loop.',
+    ],
+    learningTitle: 'The project changed how I think about designing AI products',
+    learningPoints: [
+      'AI personality is a design material - restraint and the no-action path deserve as much attention as the happy path.',
+      'Motivation design is an emotional system to tune, not a feature list to ship.',
     ],
   },
 {

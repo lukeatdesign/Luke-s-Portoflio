@@ -7,9 +7,11 @@ import { navigateToWhatIDo, navigateToCaseStudy } from "../utils/router";
 export function RichCaseStudyPage({
       richData,
       study,
+      demoSlot,
     }: {
           richData: RichCaseStudy
           study: (typeof caseStudies)[number]
+          demoSlot?: React.ReactNode
         }) {
     const currentIndex = caseStudies.findIndex((item) => item.slug === study.slug);
     const previousStudy = caseStudies[(currentIndex - 1 + caseStudies.length) % caseStudies.length];
@@ -295,6 +297,22 @@ export function RichCaseStudyPage({
             ))}
           </div>
         </section>
+
+        {/* ── Interactive demo (optional) ── */}
+        {demoSlot ? (
+          <section className="case-section motion-section">
+            <div className="section-heading motion-enter">
+              <p className="section-label">Try It Yourself</p>
+              <h2>A 60-second ShowUp</h2>
+            </div>
+            <p className="section-note">
+              This is a playable imitation of the real loop — pick a lane, run a set, and talk to
+              Yuna. Watch the intent chip on her replies: the whole trust model lives in which
+              messages do <em>not</em> write to the log.
+            </p>
+            <div className="motion-card">{demoSlot}</div>
+          </section>
+        ) : null}
 
         {/* ── Outcomes ── */}
         <section className="case-section case-section-outcome motion-section">

@@ -1,3 +1,4 @@
+import { ArrowTopRightOnSquareIcon } from "@heroicons/react/24/outline";
 import { BrandLogo } from "../components/BrandLogo";
 import { learningIcons } from "../constants";
 import { caseStudies } from "../content/caseStudies";
@@ -103,7 +104,11 @@ export function RichCaseStudyPage({
       <main className="case-content rich-case-content">
         {/* ── Overview ── */}
         <section className="case-section case-section-overview motion-section">
-          <div className="rich-overview-grid rich-overview-grid-single motion-enter">
+          <div
+            className={`rich-overview-grid${
+              richData.projectLinks?.length ? '' : ' rich-overview-grid-single'
+            } motion-enter`}
+          >
             <div className="rich-overview-main">
               <div className="section-heading">
                 <p className="section-label">Background</p>
@@ -111,6 +116,31 @@ export function RichCaseStudyPage({
               </div>
               <p className="section-note rich-overview-note">{richData.background}</p>
             </div>
+            {richData.projectLinks?.length ? (
+              <div className="rich-overview-side">
+                <section className="rich-overview-meta motion-card">
+                  <p className="section-label">Project Links</p>
+                  <div className="rich-overview-link-list">
+                    {richData.projectLinks.map((link) =>
+                      link.href ? (
+                        <a className="rich-overview-link-row" href={link.href} key={link.label}>
+                          <span className="rich-overview-link-label">{link.label}</span>
+                          <span className="rich-overview-link-value">
+                            Visit site
+                            <ArrowTopRightOnSquareIcon className="inline-icon contact-icon" />
+                          </span>
+                        </a>
+                      ) : (
+                        <div className="rich-overview-link-row" key={link.label}>
+                          <span className="rich-overview-link-label">{link.label}</span>
+                          <span className="rich-overview-link-value">{link.note}</span>
+                        </div>
+                      ),
+                    )}
+                  </div>
+                </section>
+              </div>
+            ) : null}
             <aside className="rich-overview-summary-panel motion-card">
               <p className="section-label">Case Study Summary</p>
               <div className="rich-overview-summary-grid">

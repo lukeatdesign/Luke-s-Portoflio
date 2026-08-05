@@ -17,6 +17,7 @@ export type RichCaseStudy = {
   }
   summary: { emphasis: string; body: string }[]
   background: string
+  projectLinks?: { label: string; href: string; note?: string }[]
   motivation: string[]
   role: string[]
   research?: {

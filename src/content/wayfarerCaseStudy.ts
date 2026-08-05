@@ -48,6 +48,7 @@ export const wayfarerCaseStudy: RichCaseStudy = {
   ],
   background:
     'Wayfarer is a Thailand work immigration assistant built as a hackathon assignment. It turns a complex, document-heavy visa process into a guided, personalized journey - from onboarding all the way through to application status.',
+  projectLinks: [{ label: 'Live Demo', href: 'https://wayfarer-luke.vercel.app/' }],
   motivation: [
     "Honestly, I accepted this assignment without much belief that I could actually do it. I hadn't touched code in about 10 years. I'd never really used GitHub, never deployed anything on any platform.",
     "I started by reading the brief step by step just to understand what it meant. Then I thought about who this would actually help. That's how I came up with Mo Rakat - a 24-year-old UX designer from Cambodia with a job offer in Bangkok. Skilled, ready, but completely new to Thai immigration. She doesn't know what she doesn't know.",
